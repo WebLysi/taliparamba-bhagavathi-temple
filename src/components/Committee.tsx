@@ -1,7 +1,7 @@
 import { Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import committeeImage from "@/assets/committee-group.jpg";
-import maathrisamithiImage from "@/assets/maathrisamithi-group.jpg";
+import committeeImage from "@/assets/committee-group.svg";
+import maathrisamithiImage from "@/assets/maathrisamithi-group.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Committee = () => {

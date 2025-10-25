@@ -58,7 +58,7 @@ const Navbar = () => {
               ॐ
             </div>
             <span className="text-2xl sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Temple
+              <span className="hidden xl:inline">Sri Maha Devi Temple</span>
             </span>
           </div>
 

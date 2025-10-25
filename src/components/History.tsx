@@ -54,7 +54,7 @@ const History = () => {
         </div>
 
         {/* Palm-leaf manuscript style card */}
-        <Card className="max-w-4xl mx-auto p-8 sm:p-10 md:p-16 shadow-2xl relative overflow-hidden"
+        <Card className="mx-auto p-8 sm:p-10 md:p-16 shadow-2xl relative overflow-auto"
           style={{
             backgroundColor: 'hsl(var(--manuscript-bg))',
             backgroundImage: `
@@ -83,7 +83,8 @@ const History = () => {
             {/* Decorative header */}
             <div className="text-center pb-6 border-b-2 border-[hsl(var(--manuscript-accent))]">
               <div className="text-2xl sm:text-3xl font-bold text-[hsl(var(--manuscript-text))] mb-2">
-                ॐ श्री महा देवी मन्दिर ॐ
+                {/* ॐ श्री महा देवी मन्दिर ॐ */}
+                Title Of The History
               </div>
               <div className="text-sm text-[hsl(var(--manuscript-border))]">
                 ✦ ✦ ✦
@@ -103,11 +104,10 @@ const History = () => {
 
             <div className="mt-8 p-6 sm:p-8 bg-[hsl(var(--manuscript-accent))]/10 rounded-lg border-2 border-[hsl(var(--manuscript-accent))] relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[hsl(var(--manuscript-bg))] px-4 text-[hsl(var(--manuscript-accent))] font-bold">
-                ✦ Sacred Verse ✦
+                ✦ Additional Quote ✦
               </div>
               <p className="text-[hsl(var(--manuscript-text))] text-center font-medium italic pt-2">
-                "Where the divine presence is felt in every breeze, where prayers echo through centuries, 
-                where devotion finds its eternal home - this is our sacred Sri Maha Devi Temple."
+                "loram ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </p>
             </div>
 

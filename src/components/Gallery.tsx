@@ -1,7 +1,7 @@
 import { Image as ImageIcon } from "lucide-react";
-import celebration1 from "@/assets/celebration-1.jpg";
-import celebration2 from "@/assets/celebration-2.jpg";
-import celebration3 from "@/assets/celebration-3.jpg";
+import celebration1 from "@/assets/celebration-1.svg";
+import celebration2 from "@/assets/celebration-2.svg";
+import celebration3 from "@/assets/celebration-3.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Gallery = () => {

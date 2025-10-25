@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
                 ॐ
               </div>
-              <h3 className="text-xl font-bold">Sri Maha Devi Temple</h3>
+              <h3 className="text-xl font-bold">Sri Maha Devi Temple Taliparamba</h3>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               {t.footer.tagline}
@@ -28,13 +28,13 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-white/80 text-sm">+91 98765 43210</p>
-                  <p className="text-white/80 text-sm">+91 98765 43211</p>
+                  <p className="text-white/80 text-sm">+91 0000000000</p>
+                  <p className="text-white/80 text-sm">+91 0000000000</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <p className="text-white/80 text-sm">info@srimahadevitemple.org</p>
+                <p className="text-white/80 text-sm">sri.maha.devi.temple.taliparamba@gamil.com</p>
               </div>
             </div>
           </div>
@@ -45,8 +45,8 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
               <p className="text-white/80 text-sm leading-relaxed">
-                Temple Road, Thrissur District<br />
-                Kerala - 680001<br />
+                Taliparamba, Kannur District<br />
+                Kerala - 000000<br />
                 India
               </p>
             </div>

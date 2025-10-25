@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Shield, User } from "lucide-react";
-import thanthriImage from "@/assets/thanthri.jpg";
-import rakshaadhikaariImage from "@/assets/rakshaadhikaari.jpg";
+import thanthriImage from "@/assets/thanthri.svg";
+import rakshaadhikaariImage from "@/assets/rakshaadhikaari.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Management = () => {

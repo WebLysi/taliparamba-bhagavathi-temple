@@ -9,42 +9,23 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useLanguage } from "@/context/LanguageContext";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Vazhipaad = () => {
   const { t } = useLanguage();
   
-  const offerings = [
-    {
-      name: t.vazhipaad.archana,
-      time: t.vazhipaad.archanaTime,
-      price: "₹51",
-    },
-    {
-      name: t.vazhipaad.abhishekam,
-      time: t.vazhipaad.abhishekamTime,
-      price: "₹251",
-    },
-    {
-      name: t.vazhipaad.sahasranamam,
-      time: t.vazhipaad.sahasranamamTime,
-      price: "₹151",
-    },
-    {
-      name: t.vazhipaad.pushpanjali,
-      time: t.vazhipaad.pushpanjaliTime,
-      price: "₹101",
-    },
-    {
-      name: t.vazhipaad.vilakku,
-      time: t.vazhipaad.vilakkuTime,
-      price: "₹71",
-    },
-    {
-      name: t.vazhipaad.prasadam,
-      time: t.vazhipaad.prasadamTime,
-      price: "₹201",
-    },
-  ];
+  // use items from translation object (t.vazhipaad.items)
+  const offerings = t?.vazhipaad?.items ?? [];
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+  const totalPages = Math.max(1, Math.ceil(offerings.length / itemsPerPage));
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedOfferings = offerings.slice(startIndex, startIndex + itemsPerPage);
+
+  const goPrev = () => setCurrentPage((p) => Math.max(1, p - 1));
+  const goNext = () => setCurrentPage((p) => Math.min(totalPages, p + 1));
 
   return (
     <section id="vazhipaad" className="py-16 sm:py-20 bg-background">
@@ -65,21 +46,17 @@ const Vazhipaad = () => {
               <TableHeader>
                 <TableRow className="bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/15 hover:to-secondary/15">
                   <TableHead className="text-lg sm:text-xl font-bold text-foreground">{t.vazhipaad.name}</TableHead>
-                  <TableHead className="text-lg sm:text-xl font-bold text-foreground">{t.vazhipaad.time}</TableHead>
                   <TableHead className="text-lg sm:text-xl font-bold text-foreground text-right">{t.vazhipaad.price}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {offerings.map((offering, index) => (
+                {paginatedOfferings.map((offering: any, index: number) => (
                   <TableRow 
-                    key={index}
+                    key={startIndex + index}
                     className="hover:bg-primary/5 transition-colors duration-200"
                   >
                     <TableCell className="text-lg sm:text-xl font-semibold text-foreground">
                       {offering.name}
-                    </TableCell>
-                    <TableCell className="text-lg sm:text-base text-muted-foreground">
-                      {offering.time}
                     </TableCell>
                     <TableCell className="text-lg sm:text-xl font-bold text-primary text-right">
                       {offering.price}
@@ -89,6 +66,19 @@ const Vazhipaad = () => {
               </TableBody>
             </Table>
           </Card>
+
+          {/* Pagination Controls */}
+          <div className="flex items-center justify-end gap-2 mt-3">
+            <Button variant="outline" size="sm" onClick={goPrev} disabled={currentPage === 1}>
+              Prev
+            </Button>
+            <div className="text-sm text-muted-foreground px-2">
+              Page {currentPage} / {totalPages}
+            </div>
+            <Button variant="outline" size="sm" onClick={goNext} disabled={currentPage === totalPages}>
+              Next
+            </Button>
+          </div>
         </div>
 
         <Card className="max-w-4xl mx-auto mt-12 p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/30 shadow-soft animate-scale-in">
