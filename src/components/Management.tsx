@@ -40,18 +40,16 @@ const Management = () => {
               
               <div className="space-y-3 sm:space-y-2">
                 <h4 className="text-2xl sm:text-xl font-bold text-foreground">
-                  Panicker Krishnan Namboodiri
+                  Tantri Name
                 </h4>
                 <p className="text-muted-foreground text-lg sm:text-base">Chief Tantri - Temple Head Priest</p>
                 
                 <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
                   <p className="leading-relaxed text-lg sm:text-base">
-                    A revered scholar of Vedic traditions with over 40 years of experience in temple 
-                    rituals and ceremonies. Maintains the sacred traditions passed down through 
-                    generations of his family.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus tenetur nesciunt voluptatum cupiditate beatae dolorum mollitia natus quasi itaque optio, obcaecati aspernatur qui velit earum enim laboriosam non fugit!
                   </p>
                   <p className="text-base sm:text-sm text-muted-foreground pt-3 sm:pt-2">
-                    <span className="font-semibold">Lineage:</span> 18th generation Tantri
+                    <span className="font-semibold">Lineage:</span> Tantri
                   </p>
                   <p className="text-base sm:text-sm text-muted-foreground">
                     <span className="font-semibold">Specialization:</span> Vedic rituals, Tantric ceremonies
@@ -83,18 +81,16 @@ const Management = () => {
               
               <div className="space-y-3 sm:space-y-2">
                 <h4 className="text-2xl sm:text-xl font-bold text-foreground">
-                  Suresh Kumar Pillai
+                  Rakshaadhikaari Name
                 </h4>
                 <p className="text-muted-foreground text-lg sm:text-base">Temple Administrator & Guardian</p>
                 
                 <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
                   <p className="leading-relaxed text-lg sm:text-base">
-                    Dedicated administrator overseeing daily temple operations, maintenance, and ensuring 
-                    the smooth conduct of all religious ceremonies. Coordinates with devotees and manages 
-                    temple resources with utmost care.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ex harum neque ipsam, similique, totam, rerum dolore commodi illum iure quidem atque eum fugiat eveniet. Pariatur harum voluptatem laboriosam ad.
                   </p>
                   <p className="text-base sm:text-sm text-muted-foreground pt-3 sm:pt-2">
-                    <span className="font-semibold">Experience:</span> 15 years in temple management
+                    <span className="font-semibold">Experience:</span> 
                   </p>
                   <p className="text-base sm:text-sm text-muted-foreground">
                     <span className="font-semibold">Contact:</span> Available at temple office daily
