@@ -8,23 +8,23 @@ const Committee = () => {
   const { t } = useLanguage();
   
   const committeeMembers = [
-    { name: "Rajesh Kumar", position: t.committee.president },
-    { name: "Madhavan Nair", position: t.committee.vicePresident },
-    { name: "Sreekumar Pillai", position: t.committee.secretary },
-    { name: "Vishnu Warrier", position: t.committee.treasurer },
-    { name: "Raman Menon", position: t.committee.jointSecretary },
-    { name: "Sudhir Panicker", position: t.committee.member },
-    { name: "Balachandran", position: t.committee.member },
-    { name: "Gopakumar", position: t.committee.member },
+    { name: "Name", position: t.committee.president },
+    { name: "Name", position: t.committee.vicePresident },
+    { name: "Name", position: t.committee.secretary },
+    { name: "Name", position: t.committee.treasurer },
+    { name: "Name", position: t.committee.jointSecretary },
+    { name: "Name", position: t.committee.member },
+    { name: "Name", position: t.committee.member },
+    { name: "Name", position: t.committee.member },
   ];
 
   const maathrisamithiMembers = [
-    { name: "Lakshmi Devi", position: t.committee.president },
-    { name: "Saraswati Amma", position: t.committee.vicePresident },
-    { name: "Parvathi Menon", position: t.committee.secretary },
-    { name: "Radha Warrier", position: t.committee.treasurer },
-    { name: "Sita Nair", position: t.committee.jointSecretary },
-    { name: "Geetha Pillai", position: t.committee.member },
+    { name: "Name", position: t.committee.president },
+    { name: "Name", position: t.committee.vicePresident },
+    { name: "Name", position: t.committee.secretary },
+    { name: "Name", position: t.committee.treasurer },
+    { name: "Name", position: t.committee.jointSecretary },
+    { name: "Name", position: t.committee.member },
   ];
 
   return (

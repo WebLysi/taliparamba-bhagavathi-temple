@@ -10,13 +10,15 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 mb-10 sm:mb-8">
           {/* About */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl sm:text-base">
                 ॐ
               </div>
-              <h3 className="text-xl font-bold">Sri Maha Devi Temple Taliparamba</h3>
+              <span className="text-2xl sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span className="hidden xl:inline">Sri Maha Devi Temple</span>
+              </span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <p className="text-white/80 text-sm leading-relaxed mt-0.5">
               {t.footer.tagline}
             </p>
           </div>

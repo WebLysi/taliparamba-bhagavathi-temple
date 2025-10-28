@@ -11,21 +11,23 @@ const Management = () => {
     <section id="management" className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 px-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 px-4">
             {t.management.title}
           </h2>
-          <p className="text-xl sm:text-xl text-muted-foreground">{t.management.subtitle}</p>
+          <p className="text-lg sm:text-xl text-muted-foreground">{t.management.subtitle}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 max-w-5xl mx-auto">
           {/* Thanthri Section */}
-          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20">
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 sm:p-8">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <User className="w-8 h-8 sm:w-6 sm:h-6 text-white" />
+          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20 h-full">
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 sm:p-8 h-[100px] flex items-center">
+              <div className="flex items-center gap-4 w-full">
+                <div className="hidden sm:flex w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-primary to-secondary items-center justify-center">
+                  <User className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-3xl sm:text-2xl font-bold text-foreground">{t.management.thanthri}</h3>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground line-clamp-2">
+                  {t.management.thanthri}
+                </h3>
               </div>
             </div>
 
@@ -39,10 +41,10 @@ const Management = () => {
               </div>
               
               <div className="space-y-3 sm:space-y-2">
-                <h4 className="text-2xl sm:text-xl font-bold text-foreground">
+                <h4 className="text-lg sm:text-xl font-bold text-foreground">
                   Tantri Name
                 </h4>
-                <p className="text-muted-foreground text-lg sm:text-base">Chief Tantri - Temple Head Priest</p>
+                <p className="text-muted-foreground text-sm sm:text-base">Chief Tantri - Temple Head Priest</p>
                 
                 <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
                   <p className="leading-relaxed text-lg sm:text-base">
@@ -60,13 +62,15 @@ const Management = () => {
           </Card>
 
           {/* Rakshaadhikaari Section */}
-          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20">
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 sm:p-8">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <Shield className="w-8 h-8 sm:w-6 sm:h-6 text-white" />
+          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20 h-full">
+            <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 sm:p-8 h-[100px] flex items-center">
+              <div className="flex items-center gap-4 w-full">
+                <div className="hidden sm:flex w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-accent to-primary items-center justify-center">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-3xl sm:text-2xl font-bold text-foreground">{t.management.rakshaadhikaari}</h3>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground line-clamp-2">
+                  {t.management.rakshaadhikaari}
+                </h3>
               </div>
             </div>
 
@@ -80,10 +84,10 @@ const Management = () => {
               </div>
               
               <div className="space-y-3 sm:space-y-2">
-                <h4 className="text-2xl sm:text-xl font-bold text-foreground">
+                <h4 className="text-lg sm:text-xl font-bold text-foreground">
                   Rakshaadhikaari Name
                 </h4>
-                <p className="text-muted-foreground text-lg sm:text-base">Temple Administrator & Guardian</p>
+                <p className="text-muted-foreground text-sm sm:text-base">Temple Administrator & Guardian</p>
                 
                 <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
                   <p className="leading-relaxed text-lg sm:text-base">

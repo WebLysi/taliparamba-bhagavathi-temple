@@ -82,7 +82,7 @@ const Calendar = () => {
           <p className="text-xl sm:text-xl text-[hsl(var(--manuscript-accent))]" style={{ fontFamily: 'Georgia, serif' }}>{t.calendar.subtitle}</p>
         </div>
 
-        <div className="flex justify-center gap-3 mb-8">
+        {/* <div className="flex justify-center gap-3 mb-8">
           <Button
             onClick={decreaseFontSize}
             variant="outline"
@@ -101,7 +101,7 @@ const Calendar = () => {
             <ZoomIn className="w-5 h-5 mr-2" />
             {t.calendar.largerText}
           </Button>
-        </div>
+        </div> */}
 
         <div 
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto"

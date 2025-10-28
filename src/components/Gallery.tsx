@@ -29,7 +29,7 @@ const Gallery = () => {
     <section id="gallery" className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4">
+          <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4 animate-float">
             <ImageIcon className="w-10 h-10 sm:w-8 sm:h-8 text-white" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 px-4">

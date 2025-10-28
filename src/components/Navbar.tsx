@@ -54,7 +54,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20 sm:h-16">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl sm:text-base">
+            <div className="w-10 h-10 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl sm:text-base">
               ॐ
             </div>
             <span className="text-2xl sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -96,7 +96,7 @@ const Navbar = () => {
               variant="ghost"
               size="sm"
               onClick={toggleLanguage}
-              className="px-3 py-2 text-foreground hover:text-primary hover:bg-transparent"
+              className="px-3 py-2 text-foreground hover:text-primary hover:bg-transparent border"
             >
               <Globe className="h-4 w-4 mr-1" />
               <span className="text-sm font-medium">{language === "en" ? "ML" : "EN"}</span>
@@ -104,7 +104,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="w-12 h-12"
+              className="w-12 h-12 border"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
