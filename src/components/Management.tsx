@@ -42,7 +42,7 @@ const Management = () => {
               
               <div className="space-y-3 sm:space-y-2">
                 <h4 className="text-lg sm:text-xl font-bold text-foreground">
-                  Tantri Name
+                  ബ്രഹ്‌മശ്രീ നടുവത്ത് പുടയൂർ വാസുദേവൻ നമ്പൂതിരി
                 </h4>
                 <p className="text-muted-foreground text-sm sm:text-base">Chief Tantri - Temple Head Priest</p>
                 
@@ -85,7 +85,7 @@ const Management = () => {
               
               <div className="space-y-3 sm:space-y-2">
                 <h4 className="text-lg sm:text-xl font-bold text-foreground">
-                  Rakshaadhikaari Name
+                   എ. കെ. രഘുനാഥൻ
                 </h4>
                 <p className="text-muted-foreground text-sm sm:text-base">Temple Administrator & Guardian</p>
                 

@@ -95,7 +95,6 @@ const History = () => {
               {t.history.content.split('\n\n').map((paragraph: string, index: number) => (
                 <p 
                   key={index} 
-                  className={`indent-8 ${index === 0 ? 'first-letter:text-5xl first-letter:font-bold first-letter:text-[hsl(var(--manuscript-accent))] first-letter:mr-2 first-letter:float-left' : ''}`}
                 >
                   {paragraph}
                 </p>

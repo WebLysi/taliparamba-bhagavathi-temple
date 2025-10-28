@@ -19,7 +19,7 @@ const Vazhipaad = () => {
   const offerings = t?.vazhipaad?.items ?? [];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
   const totalPages = Math.max(1, Math.ceil(offerings.length / itemsPerPage));
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedOfferings = offerings.slice(startIndex, startIndex + itemsPerPage);
@@ -45,8 +45,8 @@ const Vazhipaad = () => {
             <Table>
               <TableHeader>
                 <TableRow className="bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/15 hover:to-secondary/15">
-                  <TableHead className="text-lg sm:text-xl font-bold text-foreground">{t.vazhipaad.name}</TableHead>
-                  <TableHead className="text-lg sm:text-xl font-bold text-foreground text-right">{t.vazhipaad.price}</TableHead>
+                  <TableHead className="text-sm sm:text-xl font-bold text-foreground">{t.vazhipaad.name}</TableHead>
+                  <TableHead className="text-sm sm:text-xl font-bold text-foreground text-right">{t.vazhipaad.price}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -55,10 +55,10 @@ const Vazhipaad = () => {
                     key={startIndex + index}
                     className="hover:bg-primary/5 transition-colors duration-200"
                   >
-                    <TableCell className="text-lg sm:text-xl font-semibold text-foreground">
+                    <TableCell className="text-sm sm:text-lg font-semibold text-foreground">
                       {offering.name}
                     </TableCell>
-                    <TableCell className="text-lg sm:text-xl font-bold text-primary text-right">
+                    <TableCell className="text-sm sm:text-lg font-bold text-primary text-right">
                       {offering.price}
                     </TableCell>
                   </TableRow>
@@ -90,18 +90,18 @@ const Vazhipaad = () => {
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking1}</span>
             </p>
-            <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking2}</span>
-            </p>
+            </p> */}
             <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking3}</span>
             </p>
-            <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking4}</span>
-            </p>
+            </p> */}
           </div>
         </Card>
       </div>

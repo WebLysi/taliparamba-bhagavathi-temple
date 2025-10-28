@@ -56,6 +56,8 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
   vazhipaad: {
     title: "Vazhipaad Details",
     subtitle: "Offerings and Prices",
+    name: "Name",
+    price: "Price",
     items: [
       { name: "Pushpanjali", price: "₹51" },
       { name: "Nivedyam", price: "₹101" },
@@ -69,7 +71,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     bookingTitle: "How to Book Vazhipaad",
     booking1: "Visit the temple office during temple hours (5:00 AM - 9:00 PM)",
     booking2: "Online booking available through temple website (coming soon)",
-    booking3: "Contact: +91 98765 43210 for advance bookings",
+    booking3: "Contact: +91 000000000 for advance bookings",
     booking4: "Special packages available for festivals and occasions",
   },
   calendar: {

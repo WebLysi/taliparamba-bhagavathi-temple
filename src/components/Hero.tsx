@@ -3,6 +3,14 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const Hero = () => {
   const { t } = useLanguage();
+
+  const scrollToId = (id: string) => {
+    const el = document.querySelector(id) as HTMLElement | null;
+    if (!el) return;
+    const navHeight = document.querySelector('nav')?.clientHeight ?? 80;
+    const top = el.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
   
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -28,16 +36,16 @@ const Hero = () => {
           <p className="text-2xl sm:text-xl md:text-2xl text-muted-foreground font-medium px-4 animate-slide-up">
             {t.hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-8 px-4 animate-scale-in">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-8 px-4">
             <button
-              onClick={() => document.querySelector("#timings")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-10 py-5 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-lg sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+              onClick={() => scrollToId("#timings")}
+              className="px-10 py-5 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-lg sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
             >
               {t.hero.poojaTimings}
             </button>
             <button
-              onClick={() => document.querySelector("#vazhipaad")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-10 py-5 sm:px-8 sm:py-4 bg-card text-foreground text-lg sm:text-base border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+              onClick={() => scrollToId("#vazhipaad")}
+              className="px-10 py-5 sm:px-8 sm:py-4 bg-card text-foreground text-lg sm:text-base border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
             >
               {t.hero.vazhipaadDetails}
             </button>
@@ -46,7 +54,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+      {/* <div className="bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10"></div> */}
     </section>
   );
 };
