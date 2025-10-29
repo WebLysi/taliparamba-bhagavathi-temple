@@ -12,13 +12,15 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: "copy-404",
+      name: "copy-404-and-cname",
       writeBundle() {
-        // Copy 404.html to docs after build
-        fs.copyFileSync(
-          path.resolve(__dirname, "public/404.html"),
-          path.resolve(__dirname, "docs/404.html")
-        );
+        // Copy 404.html and CNAME to docs after build (if present)
+        const src404 = path.resolve(__dirname, "public/404.html");
+        const srcCNAME = path.resolve(__dirname, "public/CNAME");
+        const dest404 = path.resolve(__dirname, "docs/404.html");
+        const destCNAME = path.resolve(__dirname, "docs/CNAME");
+        if (fs.existsSync(src404)) fs.copyFileSync(src404, dest404);
+        if (fs.existsSync(srcCNAME)) fs.copyFileSync(srcCNAME, destCNAME);
       },
     },
   ],
