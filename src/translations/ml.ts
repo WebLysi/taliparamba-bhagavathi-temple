@@ -10,7 +10,7 @@ export default {
     committee: "കമ്മിറ്റി",
   },
   hero: {
-    title: "ശ്രീ മഹാദേവി ക്ഷേത്രം",
+    title: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം",
     subtitle: "ഭക്തിയുടെയും പാരമ്പര്യത്തിന്റെയും വിശുദ്ധ സ്ഥലം",
     poojaTimings: "പൂജ സമയം",
     vazhipaadDetails: "വഴിപാട് വിവരങ്ങൾ",

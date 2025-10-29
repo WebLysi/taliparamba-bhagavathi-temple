@@ -10,7 +10,7 @@ export default {
     committee: "Committee",
   },
   hero: {
-    title: "Sri Maha Devi Temple",
+    title: "Taliparamba Sree Bhagavathi Temple",
     subtitle: "A Sacred Place of Devotion and Tradition",
     poojaTimings: "Pooja Timings",
     vazhipaadDetails: "Vazhipaad Details",
@@ -18,7 +18,7 @@ export default {
   history: {
     title: "Temple History",
     subtitle: "A Legacy of Faith and Tradition",
-    content: `The Sri Maha Devi Temple stands as a testament to centuries of unwavering faith and devotion. Founded over 500 years ago, this sacred shrine has been the spiritual beacon for countless devotees who seek divine blessings and inner peace.
+    content: `The Taliparamba Sree Bhagavathi Templestands as a testament to centuries of unwavering faith and devotion. Founded over 500 years ago, this sacred shrine has been the spiritual beacon for countless devotees who seek divine blessings and inner peace.
 
 The temple's origins trace back to ancient times when, according to local legends, the deity manifested itself to a devoted sage who was meditating in this very location. The sage, overwhelmed by the divine presence, established the first shrine which has since evolved into the magnificent structure we see today.
 
