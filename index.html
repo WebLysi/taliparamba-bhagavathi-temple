@@ -13,19 +13,68 @@
     <meta property="og:description" content="Visit Sri Maha Devi Temple - 800 years of spiritual heritage, daily poojas, festivals, and divine blessings in Kerala, India." />
     <meta property="og:type" content="website" />
 
+    <style>
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #ff8833;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      .fade-out {
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+    </style>
   </head>
 
   <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
-    (function(){
-        let redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-            history.replaceState(null, null, redirect);
-        }
-    })();
-</script>
+      (function(){
+          let redirect = sessionStorage.redirect;
+          delete sessionStorage.redirect;
+          if (redirect && redirect != location.href) {
+              history.replaceState(null, null, redirect);
+          }
+      })();
+    </script>
+    <script>
+      const preloader = document.querySelector('#preloader');
+      if (preloader) {
+        window.addEventListener('load', () => {
+          preloader.classList.add('fade-out');
+          setTimeout(() => {
+            preloader.remove();
+          }, 300);
+        });
+      }
+    </script>
   </body>
 </html>

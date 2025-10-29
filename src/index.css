@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Temple-specific tokens */
-    --gradient-divine: linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(45 100% 50%) 100%);
+    --gradient-divine: linear-gradient(135deg, rgb(255, 136, 51) 0%, hsl(45 100% 50%) 100%);
     --gradient-sacred: linear-gradient(180deg, hsl(32 45% 97%) 0%, hsl(32 40% 92%) 100%);
     --shadow-soft: 0 4px 20px -4px hsl(25 100% 60% / 0.15);
     --shadow-divine: 0 8px 32px -8px hsl(25 100% 60% / 0.25);
