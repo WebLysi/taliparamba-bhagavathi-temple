@@ -30,10 +30,10 @@ const Hero = () => {
           <div className="w-24 h-24 sm:w-20 sm:h-20 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-5xl sm:text-4xl font-bold mb-8 shadow-divine animate-float">
             ॐ
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-tight px-4 animate-fade-in">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight px-4 animate-fade-in">
             {t.hero.title}
           </h1>
-          <p className="text-2xl sm:text-xl md:text-2xl text-muted-foreground font-medium px-4 animate-slide-up">
+          <p className="text-xl sm:text-lg md:text-xl text-muted-foreground font-medium px-4 animate-slide-up">
             {t.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-8 px-4">
