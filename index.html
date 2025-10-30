@@ -26,7 +26,7 @@
         align-items: center;
         justify-content: center;
       }
-      
+
       .loader {
         width: 48px;
         height: 48px;
@@ -38,41 +38,51 @@
 
       .fade-out {
         opacity: 0;
-        transition: opacity 0.3s ease-out;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        visibility: hidden;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
       }
 
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
 
   <body>
+    <!-- Preloader -->
     <div id="preloader">
       <div class="loader"></div>
     </div>
-    
+
+    <!-- React Root -->
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Redirect handler -->
     <script>
-      (function(){
-          let redirect = sessionStorage.redirect;
-          delete sessionStorage.redirect;
-          if (redirect && redirect != location.href) {
-              history.replaceState(null, null, redirect);
-          }
+      (function () {
+        let redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
       })();
     </script>
+
+    <!-- Load React App first -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Fade-out after everything loads -->
     <script>
-      const preloader = document.querySelector('#preloader');
+      const preloader = document.querySelector("#preloader");
       if (preloader) {
-        window.addEventListener('load', () => {
-          preloader.classList.add('fade-out');
-          setTimeout(() => {
-            preloader.remove();
-          }, 300);
+        window.addEventListener("load", () => {
+          preloader.classList.add("fade-out");
+          setTimeout(() => preloader.remove(), 500);
         });
       }
     </script>

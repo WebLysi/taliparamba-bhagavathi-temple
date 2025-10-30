@@ -9,12 +9,14 @@ export default {
     gallery: "Gallery",
     committee: "Committee",
   },
+  
   hero: {
     title: "Taliparamba Sree Bhagavathi Temple",
     subtitle: "A Sacred Place of Devotion and Tradition",
     poojaTimings: "Pooja Timings",
     vazhipaadDetails: "Vazhipaad Details",
   },
+
   history: {
     title: "Temple History",
     subtitle: "A Legacy of Faith and Tradition",
@@ -30,6 +32,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     zoomIn: "Zoom In",
     zoomOut: "Zoom Out",
   },
+
   management: {
     title: "Temple Management",
     subtitle: "Spiritual Leadership",
@@ -38,6 +41,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     rakshaadhikaari: "Rakshaadhikaari (Temple Administrator)",
     rakshaadhikaariDesc: "Overseeing daily temple operations and rituals",
   },
+
   timings: {
     title: "Pooja Timings",
     subtitle: "Daily Worship Schedule",
@@ -53,6 +57,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     evening2: "Night Pooja",
     evening3: "Temple Closing",
   },
+
   vazhipaad: {
     title: "Vazhipaad Details",
     subtitle: "Offerings and Prices",
@@ -74,6 +79,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     booking3: "Contact: +91 000000000 for advance bookings",
     booking4: "Special packages available for festivals and occasions",
   },
+
   calendar: {
     title: "Yearly Calendar",
     subtitle: "Annual Festivals & Celebrations",
@@ -82,6 +88,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     note: "Note:",
     noteText: "Festival dates may vary based on Malayalam calendar and lunar cycles. Please check with temple office for exact dates and timings.",
   },
+
   committee: {
     title: "Temple Committee",
     subtitle: "Dedicated Service to the Divine",
@@ -95,6 +102,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     jointSecretary: "Joint Secretary",
     member: "Committee Member",
   },
+
   gallery: {
     title: "Photo Gallery",
     subtitle: "Memories of Sacred Celebrations",
@@ -107,6 +115,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     morePhotos: "More photos from our celebrations and daily rituals",
     viewAll: "View All Photos",
   },
+
   architecture: {
     title: "Future Development",
     subtitle: "3D Architecture & Expansion Plans",
@@ -117,6 +126,7 @@ Today, the temple continues to serve as a vital center for spiritual practices, 
     gardenTitle: "Garden & Courtyard",
     gardenDesc: "Sacred garden spaces with meditation areas and traditional temple courtyards",
   },
+
   footer: {
     tagline: "A sacred place of devotion and tradition, serving the community for over 800 years with divine blessings and spiritual guidance.",
     contact: "Contact Us",
