@@ -11,11 +11,13 @@ const Footer = () => {
           {/* About */}
           <div>
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl sm:text-base">
-                ॐ
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Temple Logo" 
+                className="w-10 h-10 sm:w-10 sm:h-10 object-contain"
+              />
               <span className="text-2xl sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                <span className="hidden xl:inline">Sri Maha Devi Temple</span>
+                <span className="hidden xl:inline">{t.hero.title}</span>
               </span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed mt-0.5">

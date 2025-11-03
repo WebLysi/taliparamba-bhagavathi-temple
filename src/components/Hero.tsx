@@ -1,4 +1,4 @@
-import heroImage from "@/assets/temple-hero.jpg";
+import heroImage from "@/assets/bgg.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Hero = () => {

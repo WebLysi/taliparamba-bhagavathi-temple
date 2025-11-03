@@ -83,8 +83,7 @@ const History = () => {
             {/* Decorative header */}
             <div className="text-center pb-6 border-b-2 border-[hsl(var(--manuscript-accent))]">
               <div className="text-2xl sm:text-3xl font-bold text-[hsl(var(--manuscript-text))] mb-2">
-                {/* ॐ श्री महा देवी मन्दिर ॐ */}
-                Title Of The History
+                {t.history.name}
               </div>
               <div className="text-sm text-[hsl(var(--manuscript-border))]">
                 ✦ ✦ ✦

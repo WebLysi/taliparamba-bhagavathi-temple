@@ -20,15 +20,17 @@ export default {
   history: {
     title: "Temple History",
     subtitle: "A Legacy of Faith and Tradition",
-    content: `The Taliparamba Sree Bhagavathi Templestands as a testament to centuries of unwavering faith and devotion. Founded over 500 years ago, this sacred shrine has been the spiritual beacon for countless devotees who seek divine blessings and inner peace.
+    name: "Aithihyam",
+    content: `It has been revealed through Ashtamangalya Swarnaprashna Chinta (an astrological/divination method) that a Bhadrakali temple, which was worshipped by the Perur Illam family of Kodallur from ancient times, existed on this sacred land (Arudham).
 
-The temple's origins trace back to ancient times when, according to local legends, the deity manifested itself to a devoted sage who was meditating in this very location. The sage, overwhelmed by the divine presence, established the first shrine which has since evolved into the magnificent structure we see today.
+Taliparamba Sree Bhagavathi Temple, located close to the heart of Taliparamba town, is a center of worship where rituals are performed according to Tantric traditions, following both Bhuthalaya (spirit/elemental abode) and Devalaya (deity abode) systems.
 
-Throughout the centuries, the temple has been renovated and expanded by various rulers and philanthropists, each contributing to its grandeur while preserving its spiritual essence. The main deity, Sri Maha Devi, is believed to be a powerful manifestation of the divine feminine energy, providing protection, prosperity, and peace to all devotees.
+However, over time, this temple fell into disrepair, and later, our ancestors settled on the same land, continuing to worship and perform rituals according to the Bhuthalaya system.
 
-The temple has witnessed countless festivals, rituals, and celebrations that have become an integral part of the local culture. Generations of families have maintained their connection to this sacred space, passing down traditions and stories that keep the temple's rich history alive.
+Centuries ago, our ancestors (Chathangattillam) consecrated Parokkavil Bhagavathi, the deity of Kunnaru Desam near Ramanthali, on this sacred land. Currently, she is worshipped in the Thekkepalliyara (Southern Shrine) according to the Devalaya system.
 
-Today, the temple continues to serve as a vital center for spiritual practices, cultural preservation, and community gathering, maintaining its relevance in modern times while honoring ancient traditions.`,
+Until the dilapidated Bhadrakali temple can be renovated, the current practice here is to perform a special Padmam (ritualistic drawing) puja for Bhadrakali as part of the annual festival.
+    `,
     zoomIn: "Zoom In",
     zoomOut: "Zoom Out",
   },
