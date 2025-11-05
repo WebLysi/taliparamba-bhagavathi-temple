@@ -1,32 +1,40 @@
-import { createContext, useContext, ReactNode } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import enTranslations from "@/translations/en";
-import mlTranslations from "@/translations/ml";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import en from "@/translations/en";
+import ml from "@/translations/ml";
+import conf from "@/translations/config"; // imported config
 
 type Language = "en" | "ml";
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: any;
+  t: typeof en; // keep your existing translation type
+  cf: typeof conf; // expose config directly (no duplication)
 }
+
+const translations = { en, ml };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const { lang } = useParams<{ lang: string }>();
-  const navigate = useNavigate();
-  const language = (lang as Language) || "en";
+  const [language, setLanguage] = useState<Language>(() => {
+    const saved = localStorage.getItem("lang") as Language | null;
+    return saved ?? "en";
+  });
 
-  const setLanguage = (newLang: Language) => {
-    navigate(`/${newLang}`);
+  useEffect(() => {
+    localStorage.setItem("lang", language);
+  }, [language]);
+
+  const value: LanguageContextType = {
+    language,
+    setLanguage,
+    t: translations[language],
+    cf: conf, // provide config imported from config file
   };
 
-  // Select translations based on language
-  const translations = language === "ml" ? mlTranslations : enTranslations;
-
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t: translations }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );
@@ -34,8 +42,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within LanguageProvider");
-  }
+  if (!context) throw new Error("useLanguage must be used within LanguageProvider");
   return context;
 };
+

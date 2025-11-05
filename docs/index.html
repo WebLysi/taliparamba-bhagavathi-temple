@@ -13,46 +13,9 @@
     <meta property="og:description" content="Visit Taliparamba Sree Bhagavathi Temple- 800 years of spiritual heritage, daily poojas, festivals, and divine blessings in Kerala, India." />
     <meta property="og:type" content="website" />
 
-    <style>
-      #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .loader {
-        width: 48px;
-        height: 48px;
-        border: 5px solid #f3f3f3;
-        border-top: 5px solid #ff8833;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      .fade-out {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-    <script type="module" crossorigin src="/assets/index-pZk33RGy.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BYY1qMbL.css">
+    <style src="src/index.css"></style>
+    <script type="module" crossorigin src="/assets/index-BNGBCAuX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BcprNHXc.css">
   </head>
 
   <body>
@@ -61,21 +24,7 @@
       <div class="loader"></div>
     </div>
 
-    <!-- React Root -->
     <div id="root"></div>
-
-    <!-- Redirect handler -->
-    <script>
-      (function () {
-        let redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-
-    <!-- Load React App first -->
 
     <!-- Fade-out after everything loads -->
     <script>

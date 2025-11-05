@@ -92,22 +92,15 @@ const History = () => {
 
             <div className="text-[hsl(var(--manuscript-text))] leading-relaxed space-y-6">
               {t.history.content.split('\n\n').map((paragraph: string, index: number) => (
-                <p 
-                  key={index} 
+                <p
+                  key={index}
+                  className="whitespace-normal text-justify [hyphens:auto] [word-break:break-word]" lang={t.lang}
                 >
                   {paragraph}
                 </p>
               ))}
             </div>
 
-            <div className="mt-8 p-6 sm:p-8 bg-[hsl(var(--manuscript-accent))]/10 rounded-lg border-2 border-[hsl(var(--manuscript-accent))] relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[hsl(var(--manuscript-bg))] px-4 text-[hsl(var(--manuscript-accent))] font-bold">
-                ✦ Additional Quote ✦
-              </div>
-              <p className="text-[hsl(var(--manuscript-text))] text-center font-medium italic pt-2">
-                "loram ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              </p>
-            </div>
 
             {/* Decorative footer */}
             <div className="text-center pt-6 border-t-2 border-[hsl(var(--manuscript-accent))]">

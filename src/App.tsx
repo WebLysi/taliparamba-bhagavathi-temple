@@ -16,8 +16,8 @@ const App = () => (
       <Sonner />
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/en" replace />} />
-          <Route path="/:lang" element={
+          {/* <Route path="/" element={<Navigate to="/en" replace />} /> */}
+          <Route path="/" element={
             <LanguageProvider>
               <Index />
             </LanguageProvider>
