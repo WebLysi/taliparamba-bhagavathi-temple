@@ -3,35 +3,12 @@ export default {
     phone2: "+91 0987654321",
     whatsapp: "+91 1122334455",
     site: "www.taliparambatemple.com",
-    email: "info@taliparambatemple.com",
+    email: "",
     socials: {
         facebook: "https://www.facebook.com/taliparambatemple",
         instagram: "https://www.instagram.com/taliparambatemple",
         twitter: "https://www.twitter.com/taliparambatemple"
     },
-
-    address: {
-        en: "Taliparamba, Kannur, Kerala 670141",
-        ml: "തളിപ്പറമ്പ, കണ്ണൂര്‍, കേരളം 670141"
-    },
-
-    timings: {
-        morning: {
-            start: "05:00",
-            end: "12:00"
-        },
-        evening: {
-            start: "17:00",
-            end: "20:00"
-        },
-        specialDays: [
-            {
-                name: { en: "Temple Festival", ml: "ഉത്സവം" },
-                date: "2024-03-15"
-            }
-        ]
-    },
-
     management: {
         thanthri: {
             name: {

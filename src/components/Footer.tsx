@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
   
   return (
     <footer className="bg-gradient-to-br from-foreground to-foreground/95 text-white py-12 sm:py-16">
@@ -32,13 +32,13 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-white/80 text-sm">+91 0000000000</p>
-                  <p className="text-white/80 text-sm">+91 0000000000</p>
+                  <p className="text-white/80 text-sm">{cf.phone}</p>
+                  <p className="text-white/80 text-sm">{cf.phone2}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <p className="text-white/80 text-sm">sri.maha.devi.temple.taliparamba@gamil.com</p>
+                <p className="text-white/80 text-sm">{cf.email}</p>
               </div>
             </div>
           </div>
@@ -49,9 +49,13 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
               <p className="text-white/80 text-sm leading-relaxed">
-                Taliparamba, Kannur District<br />
-                Kerala - 000000<br />
-                India
+                {t.footer.address.split('\n').map((paragraph: string, index: number) => (
+                  <p
+                    key={index}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </p>
             </div>
           </div>
@@ -62,14 +66,16 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
               <div className="text-white/80 text-sm">
-                <p className="mb-2">
-                  <span className="font-semibold">{t.footer.daily}</span><br />
-                  5:00 AM - 9:00 PM
-                </p>
-                <p className="text-xs text-white/60">
-                  {t.footer.closedDuring}<br />
-                  12:00 PM - 4:00 PM
-                </p>
+                {t.timings.timing_list.map((item: { day: string; time: string[] }, index: number) => (
+                  <div key={index} className="mb-3">
+                    <p className="font-semibold mb-1">{item.day}:</p>
+                    <div className="ml-4">
+                      {item.time.map((timeStr: string, timeIndex: number) => (
+                        <p key={timeIndex} className="mb-1">• {timeStr}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

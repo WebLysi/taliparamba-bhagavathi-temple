@@ -1,151 +1,123 @@
 import { Card } from "@/components/ui/card";
 import { Shield, User } from "lucide-react";
-import thanthriImage from "@/assets/thanthri.svg";
-import rakshaadhikaariImage from "@/assets/rakshaadhikaari.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
+// Import all management images using Vite's glob import
+const managementImages = import.meta.glob<{ default: string }>('@/assets/management/*.{png,jpg,jpeg,svg,webp}', { 
+  eager: true 
+});
+
 const Management = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
+  
+  // Helper function to get image path
+  const getImageSrc = (imagePath: string) => {
+    if (!imagePath || imagePath.trim() === '') return null;
+    
+    // If it's a full URL, return as is
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+      return imagePath;
+    }
+    
+    // If it starts with /, it's a public path
+    if (imagePath.startsWith('/')) {
+      return imagePath;
+    }
+    
+    // Extract filename from path (handles "thanthri.png" or "management/thanthri.png")
+    const filename = imagePath.split('/').pop() || imagePath;
+    
+    // Find the image in our glob imports by matching filename
+    const found = Object.keys(managementImages).find(key => 
+      key.endsWith(filename) || key.includes(filename)
+    );
+    
+    if (found && managementImages[found]) {
+      return managementImages[found].default;
+    }
+    
+    // Fallback: try as public path
+    return `/${imagePath}`;
+  };
+
+  // Icon variants for different positions
+  const getIcon = (index: number) => {
+    return index === 0 ? User : Shield;
+  };
+
+  // Background gradient variants
+  const getGradient = (index: number) => {
+    return index === 0 
+      ? "bg-gradient-to-br from-primary/10 to-secondary/10"
+      : "bg-gradient-to-br from-accent/10 to-primary/10";
+  };
+
+  // Icon background gradient variants
+  const getIconGradient = (index: number) => {
+    return index === 0
+      ? "bg-gradient-to-br from-primary to-secondary"
+      : "bg-gradient-to-br from-accent to-primary";
+  };
   
   return (
-    <section id="management" className="py-16 sm:py-20 bg-background">
-      <div className="container mx-auto px-6 sm:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 px-4">
+    <section id="management" className="py-10 sm:py-12 md:py-14 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 px-4">
             {t.management.title}
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground">{t.management.subtitle}</p>
+          {t.management.subtitle && (
+            <p className="text-sm sm:text-base text-muted-foreground">{t.management.subtitle}</p>
+          )}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 max-w-5xl mx-auto">
-          {/* Thanthri Section */}
-          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20 h-full">
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 sm:p-8 h-[100px] flex items-center">
-              <div className="flex items-center gap-4 w-full">
-                <div className="hidden sm:flex w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-primary to-secondary items-center justify-center">
-                  <User className="w-6 h-6 text-white" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-7xl mx-auto">
+          {t.management.managements.map((member: { position: string; name: string; image: string; mentioned: string }, index: number) => {
+            const Icon = getIcon(index);
+            const imageSrc = getImageSrc(member.image);
+            
+            return (
+              <Card key={index} className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20 h-full">
+                <div className={`${getGradient(index)} p-3 sm:p-4 h-[70px] sm:h-[80px] flex items-center`}>
+                  <div className="flex items-center gap-2 sm:gap-3 w-full">
+                    <div className={`hidden sm:flex w-8 h-8 sm:w-10 sm:h-10 shrink-0 rounded-full ${getIconGradient(index)} items-center justify-center`}>
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    </div>
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground line-clamp-2">
+                      {member.position}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground line-clamp-2">
-                  {t.management.thanthri}
-                </h3>
-              </div>
-            </div>
 
-            <div className="p-6 sm:p-8 space-y-5 sm:space-y-4">
-              <div className="aspect-square rounded-lg overflow-hidden shadow-soft mb-6 sm:mb-4">
-                <img
-                  src={thanthriImage}
-                  alt="Temple Thanthri"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <div className="space-y-3 sm:space-y-2">
-                <h4 className="text-lg sm:text-xl font-bold text-foreground">
-                  ബ്രഹ്‌മശ്രീ നടുവത്ത് പുടയൂർ വാസുദേവൻ നമ്പൂതിരി
-                </h4>
-                <p className="text-muted-foreground text-sm sm:text-base">Chief Tantri - Temple Head Priest</p>
-                
-                <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
-                  <p className="leading-relaxed text-lg sm:text-base">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus tenetur nesciunt voluptatum cupiditate beatae dolorum mollitia natus quasi itaque optio, obcaecati aspernatur qui velit earum enim laboriosam non fugit!
-                  </p>
-                  <p className="text-base sm:text-sm text-muted-foreground pt-3 sm:pt-2">
-                    <span className="font-semibold">Lineage:</span> Tantri
-                  </p>
-                  <p className="text-base sm:text-sm text-muted-foreground">
-                    <span className="font-semibold">Specialization:</span> Vedic rituals, Tantric ceremonies
-                  </p>
+                <div className="p-4 sm:p-5 space-y-3 sm:space-y-4">
+                  {imageSrc && (
+                    <div className="aspect-square rounded-lg overflow-hidden shadow-soft mb-3 sm:mb-4">
+                      <img 
+                        src={imageSrc} 
+                        alt={member.position} 
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Hide image if it fails to load
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  )}
+                  
+                  <div className="space-y-2">
+                    {member.name && (
+                      <h4 className="text-sm sm:text-base font-bold text-foreground">
+                        {member.name}
+                      </h4>
+                    )}
+                    {member.mentioned && (
+                      <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{member.mentioned}</p>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Rakshaadhikaari Section */}
-          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20 h-full">
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 sm:p-8 h-[100px] flex items-center">
-              <div className="flex items-center gap-4 w-full">
-                <div className="hidden sm:flex w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-accent to-primary items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground line-clamp-2">
-                  {t.management.rakshaadhikaari}
-                </h3>
-              </div>
-            </div>
-
-            <div className="p-6 sm:p-8 space-y-5 sm:space-y-4">
-              <div className="aspect-square rounded-lg overflow-hidden shadow-soft mb-6 sm:mb-4">
-                <img
-                  src={rakshaadhikaariImage}
-                  alt="Temple Rakshaadhikaari"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <div className="space-y-3 sm:space-y-2">
-                <h4 className="text-lg sm:text-xl font-bold text-foreground">
-                   എ. കെ. രഘുനാഥൻ
-                </h4>
-                <p className="text-muted-foreground text-sm sm:text-base">Temple Administrator & Guardian</p>
-                
-                <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
-                  <p className="leading-relaxed text-lg sm:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ex harum neque ipsam, similique, totam, rerum dolore commodi illum iure quidem atque eum fugiat eveniet. Pariatur harum voluptatem laboriosam ad.
-                  </p>
-                  <p className="text-base sm:text-sm text-muted-foreground pt-3 sm:pt-2">
-                    <span className="font-semibold">Experience:</span> 
-                  </p>
-                  <p className="text-base sm:text-sm text-muted-foreground">
-                    <span className="font-semibold">Contact:</span> Available at temple office daily
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Melshanthi Section */}
-          <Card className="overflow-hidden shadow-soft hover:shadow-divine transition-all duration-300 border-primary/20 h-full">
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 sm:p-8 h-[100px] flex items-center">
-              <div className="flex items-center gap-4 w-full">
-                <div className="hidden sm:flex w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-accent to-primary items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground line-clamp-2">
-                  {t.management.rakshaadhikaari}
-                </h3>
-              </div>
-            </div>
-
-            <div className="p-6 sm:p-8 space-y-5 sm:space-y-4">
-              <div className="aspect-square rounded-lg overflow-hidden shadow-soft mb-6 sm:mb-4">
-                <img
-                  src={rakshaadhikaariImage}
-                  alt="Temple Rakshaadhikaari"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <div className="space-y-3 sm:space-y-2">
-                <h4 className="text-lg sm:text-xl font-bold text-foreground">
-                   എ. കെ. രഘുനാഥൻ
-                </h4>
-                <p className="text-muted-foreground text-sm sm:text-base">Temple Administrator & Guardian</p>
-                
-                <div className="pt-4 space-y-3 sm:space-y-2 text-foreground/90">
-                  <p className="leading-relaxed text-lg sm:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ex harum neque ipsam, similique, totam, rerum dolore commodi illum iure quidem atque eum fugiat eveniet. Pariatur harum voluptatem laboriosam ad.
-                  </p>
-                  <p className="text-base sm:text-sm text-muted-foreground pt-3 sm:pt-2">
-                    <span className="font-semibold">Experience:</span> 
-                  </p>
-                  <p className="text-base sm:text-sm text-muted-foreground">
-                    <span className="font-semibold">Contact:</span> Available at temple office daily
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

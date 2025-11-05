@@ -3,7 +3,8 @@ import architectureImage from "@/assets/temple-architecture-3d.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Architecture = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
+  const developmentPoints = t?.architecture?.points ?? [];
   
   return (
     <section id="architecture" className="py-16 sm:py-20 bg-muted/30">
@@ -28,32 +29,16 @@ const Architecture = () => {
           </div>
 
           <div className="mt-8 sm:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-card p-6 sm:p-8 rounded-lg shadow-soft">
-              <h3 className="text-2xl sm:text-xl font-bold text-card-foreground mb-4 sm:mb-3">
-                {t.architecture.sanctumTitle}
-              </h3>
-              <p className="text-muted-foreground text-lg sm:text-base leading-relaxed">
-                {t.architecture.sanctumDesc}
-              </p>
-            </div>
-
-            <div className="bg-card p-6 sm:p-8 rounded-lg shadow-soft">
-              <h3 className="text-2xl sm:text-xl font-bold text-card-foreground mb-4 sm:mb-3">
-                {t.architecture.culturalTitle}
-              </h3>
-              <p className="text-muted-foreground text-lg sm:text-base leading-relaxed">
-                {t.architecture.culturalDesc}
-              </p>
-            </div>
-
-            <div className="bg-card p-6 sm:p-8 rounded-lg shadow-soft">
-              <h3 className="text-2xl sm:text-xl font-bold text-card-foreground mb-4 sm:mb-3">
-                {t.architecture.gardenTitle}
-              </h3>
-              <p className="text-muted-foreground text-lg sm:text-base leading-relaxed">
-                {t.architecture.gardenDesc}
-              </p>
-            </div>
+            {developmentPoints.map((point: any, index: number) => (
+              <div className="bg-card p-6 sm:p-8 rounded-lg shadow-soft">
+                <h3 className="text-2xl sm:text-xl font-bold text-card-foreground mb-4 sm:mb-3">
+                  {point.title}
+                </h3>
+                <p className="text-muted-foreground text-lg sm:text-base leading-relaxed">
+                  {point.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

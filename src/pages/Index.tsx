@@ -18,8 +18,8 @@ const Index = () => {
       <History />
       <Management />
       <PoojaTimings />
-      <Vazhipaad />
       <Calendar />
+      <Vazhipaad />
       <Architecture />
       <Gallery />
       <Committee />

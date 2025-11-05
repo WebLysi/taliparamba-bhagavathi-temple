@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const History = () => {
   const [fontSize, setFontSize] = useState(1);
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
 
   const increaseFontSize = () => {
     setFontSize(prev => Math.min(prev + 0.2, 2));
@@ -100,8 +100,6 @@ const History = () => {
                 </p>
               ))}
             </div>
-
-
             {/* Decorative footer */}
             <div className="text-center pt-6 border-t-2 border-[hsl(var(--manuscript-accent))]">
               <div className="text-sm text-[hsl(var(--manuscript-border))]">

@@ -1,27 +1,27 @@
 import { Image as ImageIcon } from "lucide-react";
-import celebration1 from "@/assets/celebration-1.svg";
-import celebration2 from "@/assets/celebration-2.svg";
-import celebration3 from "@/assets/celebration-3.svg";
+import celebration1 from "@/assets/gallery/01.jpg";
+import celebration2 from "@/assets/gallery/02.jpg";
+import celebration3 from "@/assets/gallery/09.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Gallery = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
   
   const photos = [
     {
       src: celebration1,
-      title: t.gallery.poojaCeremony,
-      description: t.gallery.poojaCeremonyDesc,
+      title: "",
+      description: "",
     },
     {
       src: celebration2,
-      title: t.gallery.festivalProcession,
-      description: t.gallery.festivalProcessionDesc,
+      title: "",
+      description: "",
     },
     {
       src: celebration3,
-      title: t.gallery.eveningAarti,
-      description: t.gallery.eveningAartiDesc,
+      title: "",
+      description: "",
     },
   ];
 

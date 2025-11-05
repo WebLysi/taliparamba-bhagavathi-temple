@@ -5,7 +5,7 @@ import maathrisamithiImage from "@/assets/maathrisamithi-group.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Committee = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
   
   const committeeMembers = [
     { name: "Name", position: t.committee.president },

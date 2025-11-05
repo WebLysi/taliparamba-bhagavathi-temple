@@ -14,7 +14,6 @@ const Navbar = () => {
     { label: t.nav.management, href: "#management" },
     { label: t.nav.poojaTimings, href: "#timings" },
     { label: t.nav.vazhipaad, href: "#vazhipaad" },
-    { label: t.nav.calendar, href: "#calendar" },
     { label: t.nav.gallery, href: "#gallery" },
     { label: t.nav.committee, href: "#committee" },
   ];

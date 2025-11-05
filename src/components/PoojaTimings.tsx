@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
 
 const PoojaTimings = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
   
   const timings = [
     {

@@ -1,8 +1,8 @@
-import heroImage from "@/assets/bgg.jpg";
+import heroImage from "@/assets/hero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
 
   const scrollToId = (id: string) => {
     const el = document.querySelector(id) as HTMLElement | null;

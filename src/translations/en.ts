@@ -1,26 +1,29 @@
+import Management from "@/components/Management";
+import { title } from "process";
+
 export default {
     lang: "en",
+
     nav: {
         home: "Home",
         history: "History",
         management: "Management",
-        poojaTimings: "Pooja Timings",
+        poojaTimings: "Timings & Festivals",
         vazhipaad: "Vazhipaad",
-        calendar: "Calendar",
         gallery: "Gallery",
         committee: "Committee",
     },
 
     hero: {
         title: "Taliparamba Sree Bhagavathi Temple",
-        subtitle: "A Sacred Place of Devotion and Tradition",
+        subtitle: "Om Namah Shivaya",
         poojaTimings: "Pooja Timings",
         vazhipaadDetails: "Vazhipaad Details",
     },
 
     history: {
         title: "Temple History",
-        subtitle: "A Legacy of Faith and Tradition",
+        subtitle: "",
         name: "Aithihyam",
         content: `It has been revealed through Ashtamangalya Swarnaprashna Chinta (an astrological/divination method) that a Bhadrakali temple, which was worshipped by the Perur Illam family of Kodallur from ancient times, existed on this sacred land (Arudham).
 
@@ -38,11 +41,27 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
 
     management: {
         title: "Temple Management",
-        subtitle: "Spiritual Leadership",
-        thanthri: "Thanthri (Chief Priest)",
-        thanthriDesc: "Traditional priest family serving for generations",
-        rakshaadhikaari: "Rakshaadhikaari (Temple Administrator)",
-        rakshaadhikaariDesc: "Overseeing daily temple operations and rituals",
+        subtitle: "", 
+        managements: [
+            {
+                position: "Temple Thanthri",
+                name: "Brahmasree Naduvath Pudayoor Vasudevan Namboothiri",
+                image: "thanthri.png",
+                mentioned: "Sree Rajarajeswaram Temple Tantri"
+            },
+            {
+                position: "Temple Rakshaadhikaari",
+                name: "A. K. Reghunathan",
+                image: "placeholder.svg",
+                mentioned: ""
+            },
+            {
+                position: "Temple Melshanthi",
+                name: "Vishnu Namboothiri, Chetur Illam",
+                image: "melshanthi.jpeg",
+                mentioned: ""
+            },
+        ]
     },
 
     timings: {
@@ -59,7 +78,13 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         evening1: "Deeparadhana",
         evening2: "Night Pooja",
         evening3: "Temple Closing",
+
+        timing_list: [
+            {day: "All fryday evening", time: ["Evening 5:00 PM - 7:30 PM"]},
+            {day: "All hindu festival days", time: ["Morning 5:30 AM - 9:00 AM", "Evening 5:00 PM - 7:30 PM"]}
+        ]
     },
+    
 
     vazhipaad: {
         title: "Vazhipaad Details",
@@ -79,7 +104,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         bookingTitle: "How to Book Vazhipaad",
         booking1: "Visit the temple office during temple hours (5:00 AM - 9:00 PM)",
         booking2: "Online booking available through temple website (coming soon)",
-        booking3: "Contact: +91 000000000 for advance bookings",
+        booking3: "Contact: +91 9539531021 for advance bookings",
         booking4: "Special packages available for festivals and occasions",
     },
 
@@ -109,35 +134,33 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
     gallery: {
         title: "Photo Gallery",
         subtitle: "Memories of Sacred Celebrations",
-        poojaCeremony: "Pooja Ceremony",
-        poojaCeremonyDesc: "Devotees performing evening pooja with oil lamps",
-        festivalProcession: "Festival Procession",
-        festivalProcessionDesc: "Grand festival procession with decorated elephant",
-        eveningAarti: "Evening Aarti",
-        eveningAartiDesc: "Sacred evening aarti ceremony with brass lamps",
         morePhotos: "More photos from our celebrations and daily rituals",
         viewAll: "View All Photos",
+
+
     },
 
     architecture: {
-        title: "Future Development",
+        title: "Infrastructural Developments",
         subtitle: "3D Architecture & Expansion Plans",
-        sanctumTitle: "Main Sanctum Expansion",
-        sanctumDesc: "Enhanced darshan area with traditional architecture and modern facilities for devotees",
-        culturalTitle: "Cultural Center",
-        culturalDesc: "New community hall for religious ceremonies, cultural programs, and spiritual gatherings",
-        gardenTitle: "Garden & Courtyard",
-        gardenDesc: "Sacred garden spaces with meditation areas and traditional temple courtyards",
+        points: [
+            {title: "New Bhadrakali Temple Construction", text: "Construction of a new Bhadrakali Temple with traditional temple architecture, adhering to Agama Shastra and spiritual design principles."},
+            {title: "Parashakti Consecration in Vayu Kona", text: "New consecration (Prathishta) of the deity Parashakti in the North-West corner (Vayu Kona) of the temple complex, including the installation of a Peetha (pedestal) and stone idol (Shila Vigraham)."},
+            {title: "Expedited Completion and Re-Consecration Ceremony", text: "Fast-tracked temple construction to ensure timely completion, followed by the re-consecration (Punah Prathishta) and Brahma Kalasham rituals."},
+        ],
+       
     },
 
     footer: {
-        tagline: "A sacred place of devotion and tradition, serving the community for over 800 years with divine blessings and spiritual guidance.",
+        tagline: "",
         contact: "Contact Us",
         location: "Location",
-        templeHours: "Temple Hours",
-        daily: "Daily:",
-        closedDuring: "Closed during afternoon break",
-        copyright: "© {year} Sri Maha Devi Temple. All rights reserved.",
-        preserving: "Preserving traditions, spreading devotion",
+        address: `Taliparamba, 
+Kannur,
+Kerala
+PIN-CODE: 670141`,
+        templeHours: "Temple Opening Hours",
+        copyright: "© {year} Taliparamba Sree Bhagavathi Temple. All rights reserved.",
+        preserving: "",
     },
 };

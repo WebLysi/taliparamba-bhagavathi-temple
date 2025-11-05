@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Calendar = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
   const [fontSize, setFontSize] = useState(100);
 
   const increaseFontSize = () => {

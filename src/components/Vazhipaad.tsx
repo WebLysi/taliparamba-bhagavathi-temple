@@ -1,4 +1,4 @@
-import { Gift } from "lucide-react";
+import { Gift, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import {
   Table,
@@ -13,7 +13,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const Vazhipaad = () => {
-  const { t } = useLanguage();
+  const { cf, t } = useLanguage();
   
   // use items from translation object (t.vazhipaad.items)
   const offerings = t?.vazhipaad?.items ?? [];
@@ -82,22 +82,23 @@ const Vazhipaad = () => {
         </div>
 
         <Card className="max-w-4xl mx-auto mt-12 p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/30 shadow-soft animate-scale-in">
-          <h3 className="text-2xl sm:text-2xl font-bold text-foreground mb-6 sm:mb-4 text-center">
-            {t.vazhipaad.bookingTitle}
+          <h3 className="text-lg sm:text-xl font-bold text-foreground text-center">
+            {/* {t.vazhipaad.bookingTitle} */} 
+            {t.vazhipaad.booking3}
           </h3>
           <div className="space-y-4 sm:space-y-3 text-foreground/90">
-            <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking1}</span>
-            </p>
+            </p> */}
             {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking2}</span>
             </p> */}
-            <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking3}</span>
-            </p>
+            </p> */}
             {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
               <span className="text-primary font-bold text-xl sm:text-base">•</span>
               <span>{t.vazhipaad.booking4}</span>
