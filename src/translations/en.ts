@@ -16,7 +16,7 @@ export default {
 
     hero: {
         title: "Taliparamba Sree Bhagavathi Temple",
-        subtitle: "Om Dum Durgayei Namaha",
+        subtitle: "Pookoth Street, Taliparamba",
         poojaTimings: "Timings & Festivals",
         vazhipaadDetails: "Offerings Details",
     },
@@ -65,30 +65,18 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
     },
 
     timings: {
-        title: "Pooja Timings",
+        title: "Temple Timings",
         subtitle: "Daily Worship Schedule",
-        morning: "Morning Poojas",
-        afternoon: "Afternoon Poojas",
-        evening: "Evening Poojas",
-        morning1: "Nirmalyam & Opening",
-        morning2: "Usha Pooja",
-        morning3: "Ettu Trikala Pooja",
-        afternoon1: "Uccha Pooja",
-        afternoon2: "Athazha Pooja",
-        evening1: "Deeparadhana",
-        evening2: "Night Pooja",
-        evening3: "Temple Closing",
-
         timing_list: [
-            {day: "All friday evening", time: ["Evening 5:00 PM - 7:30 PM"]},
-            {day: "All hindu festival days", time: ["Morning 5:30 AM - 9:00 AM", "Evening 5:00 PM - 7:30 PM"]}
+            {day: "All Friday Evening", time: ["Evening 5:00 PM - 7:30 PM"]},
+            {day: "All Hindu Festival Days", time: ["Morning 5:30 AM - 9:00 AM", "Evening 5:00 PM - 7:30 PM"]}
         ]
     },
     
 
     vazhipaad: {
-        title: "Vazhipaad Details",
-        subtitle: "Offerings and Prices",
+        title: "Offerings Details",
+        subtitle: "",
         name: "Name",
         price: "Price",
         items: [
