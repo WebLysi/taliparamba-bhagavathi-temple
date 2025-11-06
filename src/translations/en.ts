@@ -8,7 +8,7 @@ export default {
         home: "Home",
         history: "History",
         management: "Management",
-        poojaTimings: "Timings & Festivals",
+        poojaTimings: "Temple Timing",
         vazhipaad: "Offerings",
         gallery: "Gallery",
         committee: "Committee",
@@ -17,7 +17,7 @@ export default {
     hero: {
         title: "Taliparamba Sree Bhagavathi Temple",
         subtitle: "Om Dum Durgayei Namaha",
-        poojaTimings: "Timings & Festivals",
+        poojaTimings: "Temple Timing",
         vazhipaadDetails: "Offerings Details",
     },
 
