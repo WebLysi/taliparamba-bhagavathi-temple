@@ -9,22 +9,22 @@ export default {
         history: "History",
         management: "Management",
         poojaTimings: "Timings & Festivals",
-        vazhipaad: "Vazhipaad",
+        vazhipaad: "Offerings",
         gallery: "Gallery",
         committee: "Committee",
     },
 
     hero: {
         title: "Taliparamba Sree Bhagavathi Temple",
-        subtitle: "Om Namah Shivaya",
-        poojaTimings: "Pooja Timings",
-        vazhipaadDetails: "Vazhipaad Details",
+        subtitle: "Om Dum Durgayei Namaha",
+        poojaTimings: "Timings & Festivals",
+        vazhipaadDetails: "Offerings Details",
     },
 
     history: {
         title: "Temple History",
         subtitle: "",
-        name: "Aithihyam",
+        name: `"Jai Maa Durga!"`,
         content: `It has been revealed through Ashtamangalya Swarnaprashna Chinta (an astrological/divination method) that a Bhadrakali temple, which was worshipped by the Perur Illam family of Kodallur from ancient times, existed on this sacred land (Arudham).
 
 Taliparamba Sree Bhagavathi Temple, located close to the heart of Taliparamba town, is a center of worship where rituals are performed according to Tantric traditions, following both Bhuthalaya (spirit/elemental abode) and Devalaya (deity abode) systems.
@@ -80,7 +80,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         evening3: "Temple Closing",
 
         timing_list: [
-            {day: "All fryday evening", time: ["Evening 5:00 PM - 7:30 PM"]},
+            {day: "All friday evening", time: ["Evening 5:00 PM - 7:30 PM"]},
             {day: "All hindu festival days", time: ["Morning 5:30 AM - 9:00 AM", "Evening 5:00 PM - 7:30 PM"]}
         ]
     },

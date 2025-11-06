@@ -14,7 +14,7 @@
     <meta property="og:type" content="website" />
 
     <style src="src/index.css"></style>
-    <script type="module" crossorigin src="/assets/index-C5bRdyTm.js"></script>
+    <script type="module" crossorigin src="/assets/index-u_lTbsfS.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CaVpv0BX.css">
   </head>
 
@@ -29,12 +29,44 @@
     <!-- Fade-out after everything loads -->
     <script>
       const preloader = document.querySelector("#preloader");
-      if (preloader) {
-        window.addEventListener("load", () => {
+      let preloaderHidden = false;
+
+      const hidePreloader = () => {
+        if (preloader && !preloaderHidden) {
+          preloaderHidden = true;
           preloader.classList.add("fade-out");
           setTimeout(() => preloader.remove(), 500);
-        });
-      }
+        }
+      };
+
+      // Wait for both window load AND React images to load
+      let windowLoaded = false;
+      let imagesLoaded = false;
+
+      const checkAndHide = () => {
+        if (windowLoaded && imagesLoaded) {
+          hidePreloader();
+        }
+      };
+
+      // Listen for window load event
+      window.addEventListener("load", () => {
+        windowLoaded = true;
+        checkAndHide();
+      });
+
+      // Listen for custom event from React when all images are loaded
+      window.addEventListener("allImagesLoaded", () => {
+        imagesLoaded = true;
+        checkAndHide();
+      });
+
+      // Fallback: hide preloader after 10 seconds max to prevent infinite loading
+      setTimeout(() => {
+        if (!preloaderHidden) {
+          hidePreloader();
+        }
+      }, 10000);
     </script>
   </body>
 </html>

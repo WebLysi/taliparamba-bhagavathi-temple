@@ -28,12 +28,44 @@
     <!-- Fade-out after everything loads -->
     <script>
       const preloader = document.querySelector("#preloader");
-      if (preloader) {
-        window.addEventListener("load", () => {
+      let preloaderHidden = false;
+
+      const hidePreloader = () => {
+        if (preloader && !preloaderHidden) {
+          preloaderHidden = true;
           preloader.classList.add("fade-out");
           setTimeout(() => preloader.remove(), 500);
-        });
-      }
+        }
+      };
+
+      // Wait for both window load AND React images to load
+      let windowLoaded = false;
+      let imagesLoaded = false;
+
+      const checkAndHide = () => {
+        if (windowLoaded && imagesLoaded) {
+          hidePreloader();
+        }
+      };
+
+      // Listen for window load event
+      window.addEventListener("load", () => {
+        windowLoaded = true;
+        checkAndHide();
+      });
+
+      // Listen for custom event from React when all images are loaded
+      window.addEventListener("allImagesLoaded", () => {
+        imagesLoaded = true;
+        checkAndHide();
+      });
+
+      // Fallback: hide preloader after 10 seconds max to prevent infinite loading
+      setTimeout(() => {
+        if (!preloaderHidden) {
+          hidePreloader();
+        }
+      }, 10000);
     </script>
   </body>
 </html>

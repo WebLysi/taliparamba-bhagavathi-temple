@@ -9,7 +9,6 @@ const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: t.nav.home, href: "#home" },
     { label: t.nav.history, href: "#history" },
     { label: t.nav.management, href: "#management" },
     { label: t.nav.poojaTimings, href: "#timings" },

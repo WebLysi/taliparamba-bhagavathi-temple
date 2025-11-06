@@ -9,8 +9,12 @@ import Architecture from "@/components/Architecture";
 import Gallery from "@/components/Gallery";
 import Committee from "@/components/Committee";
 import Footer from "@/components/Footer";
+import { usePreloader } from "@/hooks/usePreloader";
 
 const Index = () => {
+  // Track all images in the DOM and wait for them to load
+  usePreloader();
+
   return (
     <div className="min-h-screen pt-20 sm:pt-16">
       <Navbar />
