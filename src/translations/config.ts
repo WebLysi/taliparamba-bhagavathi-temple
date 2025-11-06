@@ -1,13 +1,13 @@
 export default {
-    phone: "+911234567890",
-    phone2: "+910987654321",
-    whatsapp: "+911122334455",
-    site: "www.taliparambatemple.com",
-    email: "",
+    phone: "+91 9539531021",
+    phone2: "+91 9447025081",
+    whatsapp: "+919539531021",
+    site: "www.taliparambasreebhagavathitemple.in",
+    email: "taliparambasreebhagavathitemple@gmail.com",
     socials: {
-        facebook: "https://www.facebook.com/taliparambatemple",
-        instagram: "https://www.instagram.com/taliparambatemple",
-        twitter: "https://www.twitter.com/taliparambatemple"
+        facebook: "https://www.facebook.com/taliparambasreebhagavathitemple",
+        instagram: "https://www.instagram.com/taliparambasreebhagavathitemple",
+        twitter: "https://www.twitter.com/taliparambasreebhagavathitemple"
     },
 }
 

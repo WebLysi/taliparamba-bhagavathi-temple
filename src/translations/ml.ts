@@ -1,5 +1,6 @@
 export default {
     lang: "ml",
+
     nav: {
         home: "മുഖം",
         history: "ഐതിഹ്യം",
@@ -122,11 +123,26 @@ export default {
     },
     calendar: {
         title: "വാർഷിക കലണ്ടർ",
-        subtitle: "വാർഷിക ഉത്സവങ്ങളും ആഘോഷങ്ങളും",
-        smallerText: "ചെറിയ ടെക്സ്റ്റ്",
-        largerText: "വലിയ ടെക്സ്റ്റ്",
+        subtitle: "",
         note: "ശ്രദ്ധിക്കുക:",
         noteText: "മലയാള കലണ്ടറും ചാന്ദ്ര ചക്രവും അനുസരിച്ച് ഉത്സവ തീയതികൾ വ്യത്യാസപ്പെടാം. കൃത്യമായ തീയതികൾക്കും സമയത്തിനും ക്ഷേത്ര ഓഫീസിൽ പരിശോധിക്കുക.",
+        event: {
+            months: "വിശേഷ ദിവസങ്ങൾ",
+            events: [
+              { date: "", name: "പ്രതിഷ്‌ഠാദിനം-മകരം 6,7 (ജനുവരി)", description: "" },
+              { date: "", name: "മഹാശിവരാത്രി", description: "" },
+              { date: "", name: "മീന മാസം പൂരം", description: "" },
+              { date: "", name: "വിഷുക്കണി - മേടമാസം (ഏപ്രിൽ)", description: "" },
+              { date: "", name: "നിറ അടിയന്തിരം", description: "" },
+              { date: "", name: "തിരുവോണം", description: "" },
+              { date: "", name: "അഷ്ടമിരോഹിണി", description: "" },
+              { date: "", name: "തൃപ്പുത്തരി", description: "" },
+              { date: "", name: "നവരാത്രി മഹോത്സവം", description: "" },
+              { date: "", name: "തൃക്കാർത്തിക", description: "" },
+              { date: "", name: "നാല് വാവുദിവസങ്ങൾ", description: "" },
+              { date: "", name: "കൂടാതെ എല്ലാ ചൊവ്വ, വെള്ളി, ഞായർ എന്നീ ദിവസങ്ങൾ", description: "" },
+            ],
+        }
     },
     committee: {
         title: "ക്ഷേത്ര കമ്മിറ്റി",
@@ -163,13 +179,13 @@ export default {
         ],
     },
     footer: {
-        tagline: "",
+        tagline: "പൂക്കോത്ത് തെരു, തളിപ്പറമ്പ",
         contact: "ഞങ്ങളെ ബന്ധപ്പെടുക",
         location: "സ്ഥലം",
         address: `തളിപ്പറമ്പ, 
 കണ്ണൂര്‍, 
 കേരളം 
-PIN-CODE: 670141
+പിൻ: 670141
         `,
         templeHours: "ദർശന സമയം",
         copyright: "© {year} Taliparamba Sree Bhagavathi Temple. All rights reserved.",

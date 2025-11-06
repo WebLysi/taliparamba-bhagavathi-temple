@@ -20,7 +20,7 @@ const Footer = () => {
                 <span>{t.hero.title}</span>
               </span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed mt-0.5">
+            <p className="text-white/80 text-sm leading-relaxed mt-1 ms-14">
               {t.footer.tagline}
             </p>
           </div>
