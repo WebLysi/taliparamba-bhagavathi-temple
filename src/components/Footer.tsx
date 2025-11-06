@@ -17,7 +17,7 @@ const Footer = () => {
                 className="w-10 h-10 sm:w-10 sm:h-10 object-contain"
               />
               <span className="text-2xl sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                <span>{t.hero.title}</span>
+                <span className="hidden xl:inline">{t.hero.title}</span>
               </span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed mt-1 ms-14">

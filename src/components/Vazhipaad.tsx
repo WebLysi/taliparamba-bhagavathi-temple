@@ -1,4 +1,4 @@
-import { Gift, MessageCircle } from "lucide-react";
+import { Gift, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import {
   Table,
@@ -81,24 +81,28 @@ const Vazhipaad = () => {
           </div>
         </div>
 
-        <Card className="max-w-4xl mx-auto mt-12 p-3 sm:p-8 md:p-10 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/30 shadow-soft animate-scale-in">
-          <h2 className="text-lg sm:text-xl font-bold text-foreground text-center">
+        <Card className="max-w-4xl mx-auto mt-12 p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/30 shadow-soft animate-scale-in">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground text-center">
+            {/* {t.vazhipaad.bookingTitle} */} 
             {t.vazhipaad.booking3}
-          </h2>
-          <div className="mt-4 flex justify-center">
-            {(() => {
-              const href = `https://wa.me/${cf.whatsapp}`;
-              return (
-                <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-                  <a href={href} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <span className="inline-flex items-center">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      WhatsApp
-                    </span>
-                  </a>
-                </Button>
-              );
-            })()}
+          </h3>
+          <div className="space-y-4 sm:space-y-3 text-foreground/90">
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+              <span className="text-primary font-bold text-xl sm:text-base">•</span>
+              <span>{t.vazhipaad.booking1}</span>
+            </p> */}
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+              <span className="text-primary font-bold text-xl sm:text-base">•</span>
+              <span>{t.vazhipaad.booking2}</span>
+            </p> */}
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+              <span className="text-primary font-bold text-xl sm:text-base">•</span>
+              <span>{t.vazhipaad.booking3}</span>
+            </p> */}
+            {/* <p className="flex items-start gap-4 sm:gap-3 text-lg sm:text-base">
+              <span className="text-primary font-bold text-xl sm:text-base">•</span>
+              <span>{t.vazhipaad.booking4}</span>
+            </p> */}
           </div>
         </Card>
       </div>

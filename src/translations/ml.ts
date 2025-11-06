@@ -12,7 +12,7 @@ export default {
     },
     hero: {
         title: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം",
-        subtitle: "പൂക്കോത്ത് തെരു, തളിപ്പറമ്പ",
+        subtitle: "ഓം ദും ദുർഗ്ഗായൈ നമഹ",
         poojaTimings: "സമയം & ഉത്സവങ്ങൾ",
         vazhipaadDetails: "വഴിപാട് വിവരങ്ങൾ",
     },
@@ -58,8 +58,20 @@ export default {
         ]
     },
     timings: {
-        title: "ദർശന സമയം",
-        subtitle: "ആരാധന സമയക്രമം",
+        title: "പൂജ സമയം",
+        subtitle: "ദിവസേന ആരാധന ഷെഡ്യൂൾ",
+        morning: "പ്രഭാത പൂജകൾ",
+        afternoon: "ഉച്ചയ്ക്കുള്ള പൂജകൾ",
+        evening: "സായാഹ്ന പൂജകൾ",
+        morning1: "നിർമല്യം & തുറക്കൽ",
+        morning2: "ഉഷാപൂജ",
+        morning3: "എട്ടു ത്രികാല പൂജ",
+        afternoon1: "ഉച്ചപൂജ",
+        afternoon2: "അതഴ പൂജ",
+        evening1: "ദീപാരാധന",
+        evening2: "രാത്രി പൂജ",
+        evening3: "ക്ഷേത്രം അടയ്ക്കൽ",
+
         timing_list: [
             {day: "എല്ലാ വെള്ളിയാഴ്ച വൈകുന്നേരവും", time: ["വൈകുന്നേരം 5:00 PM - 7:30 PM"]},
             {day: "എല്ലാ ഹൈന്ദവ വിശേഷ ദിനങ്ങളിലും", time: ["പ്രഭാതം 5:30 AM - 9:00 AM", "വൈകുന്നേരം 5:00 PM - 7:30 PM"]}
@@ -67,8 +79,8 @@ export default {
     },
 
     vazhipaad: {
-        title: "വഴിപാട് വിവരങ്ങൾ",
-        subtitle: "",
+        title: "Vazhipaad Details",
+        subtitle: "Offerings and Prices",
         name: "നാമം",
         price: "വില",
         items: [
