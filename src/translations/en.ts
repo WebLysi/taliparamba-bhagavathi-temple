@@ -46,21 +46,21 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
             {
                 position: "Temple Thanthri",
                 name: "Brahmasree Naduvath Pudayoor Vasudevan Namboothiri",
-                image: "thanthri.png",
+                image: "thanthri.webp",
                 mentioned: "Sree Rajarajeswaram Temple Tantri"
+            },   
+            {
+                position: "Temple Melshanthi",
+                name: "Vishnu Namboothiri, Chetur Illam",
+                image: "melshanthi.webp",
+                mentioned: ""
             },
             {
                 position: "Temple Rakshaadhikaari",
                 name: "A. K. Reghunathan",
-                image: "placeholder.svg",
+                image: "rakshaadhikaari.webp",
                 mentioned: ""
-            },
-            {
-                position: "Temple Melshanthi",
-                name: "Vishnu Namboothiri, Chetur Illam",
-                image: "melshanthi.jpeg",
-                mentioned: ""
-            },
+            }
         ]
     },
 
@@ -158,7 +158,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         title: "Temple Committee",
         subtitle: "Dedicated Service to the Divine",
         managingCommittee: "Temple Managing Committee",
-        maathrisamithi: "Maathrisamithi (Women's Committee)",
+        maathrisamithi: "Mathrusamithi (Women's Committee)",
         maathrisamithiDesc: "The Maathrisamithi actively participates in temple festivals, organizes special poojas for devotees, and manages various charitable activities. They play a vital role in maintaining the temple's spiritual and cultural traditions.",
         president: "President",
         vicePresident: "Vice President",
@@ -183,19 +183,22 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         points: [
             {title: "New Bhadrakali Temple Construction", text: "Construction of a new Bhadrakali Temple with traditional temple architecture, adhering to Agama Shastra and spiritual design principles."},
             {title: "Parashakti Consecration in Vayu Kona", text: "New consecration (Prathishta) of the deity Parashakti in the North-West corner (Vayu Kona) of the temple complex, including the installation of a Peetha (pedestal) and stone idol (Shila Vigraham)."},
-            {title: "Expedited Completion and Re-Consecration Ceremony", text: "Fast-tracked temple construction to ensure timely completion, followed by the re-consecration (Punah Prathishta) and Brahma Kalasham rituals."},
+            {title: "Expedited Completion and Re-Consecration Ceremony", text: "Fast-tracked temple construction to ensure timely completion, followed by the re-consecration (Punah Prathishta) and Brahma Kalasham rituals."},
         ],
        
+    },
+
+    specialNote: {
+        title: "Humble Submission to the Devotees",
+        content: "Entry to the Nalambalam (inner sanctum area) is not permitted for those who are observing \"Pula\" (ritual impurity due to death) or \"Valaima\" (ritual impurity due to birth), those under the influence of intoxicants, and those wearing shirts, banians (vests), or lungis.",
+        discipline: "Discipline and cleanliness must be strictly maintained within the temple.",
     },
 
     footer: {
         tagline: "Pookoth Street, Taliparamba",
         contact: "Contact Us",
         location: "Location",
-        address: `Taliparamba, 
-Kannur,
-Kerala
-PIN: 670141`,
+        address: `Taliparamba, Kannur, Kerala. PIN: 670141`,
         templeHours: "Temple Opening Hours",
         copyright: "© {year} Taliparamba Sree Bhagavathi Temple. All rights reserved.",
         preserving: "",

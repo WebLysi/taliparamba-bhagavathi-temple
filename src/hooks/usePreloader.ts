@@ -10,6 +10,7 @@ export const usePreloader = () => {
   const trackedImagesRef = useRef<Set<HTMLImageElement>>(new Set());
   const loadedCountRef = useRef(0);
   const totalImagesRef = useRef(0);
+  const checkIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const checkAllLoaded = () => {
@@ -28,15 +29,51 @@ export const usePreloader = () => {
       trackedImagesRef.current.add(img);
       totalImagesRef.current++;
 
-      // If image is already loaded
-      if (img.complete && img.naturalHeight !== 0) {
-        loadedCountRef.current++;
-        checkAllLoaded();
+      // If image is already loaded, verify it's fully decoded
+      if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+        // Use decode() if available to ensure image is fully decoded
+        if (img.decode) {
+          img.decode()
+            .then(() => {
+              loadedCountRef.current++;
+              checkAllLoaded();
+            })
+            .catch(() => {
+              // If decode fails, still count as loaded if natural dimensions are valid
+              if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+                loadedCountRef.current++;
+                checkAllLoaded();
+              }
+            });
+        } else {
+          // Fallback for browsers without decode()
+          loadedCountRef.current++;
+          checkAllLoaded();
+        }
       } else {
         // Wait for image to load
         const onLoad = () => {
-          loadedCountRef.current++;
-          checkAllLoaded();
+          // Ensure image is fully decoded before counting as loaded
+          if (img.decode) {
+            img.decode()
+              .then(() => {
+                loadedCountRef.current++;
+                checkAllLoaded();
+              })
+              .catch(() => {
+                // If decode fails but image loaded, still count it
+                if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+                  loadedCountRef.current++;
+                  checkAllLoaded();
+                }
+              });
+          } else {
+            // Fallback: verify natural dimensions
+            if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+              loadedCountRef.current++;
+              checkAllLoaded();
+            }
+          }
         };
         const onError = () => {
           // Count errors as loaded to not block preloader
@@ -129,8 +166,29 @@ export const usePreloader = () => {
       }, 5000); // Safety timeout
     }
 
-    // Initial check after a short delay to allow React to render
-    const timeoutId = setTimeout(checkImages, 100);
+    // Initial check after a delay to allow React to render
+    const timeoutId = setTimeout(() => {
+      checkImages();
+      // Also do periodic checks to catch images that load later
+      checkIntervalRef.current = setInterval(() => {
+        if (!hasDispatchedRef.current) {
+          checkImages();
+        } else {
+          if (checkIntervalRef.current) {
+            clearInterval(checkIntervalRef.current);
+            checkIntervalRef.current = null;
+          }
+        }
+      }, 200);
+      
+      // Clear interval after 15 seconds
+      setTimeout(() => {
+        if (checkIntervalRef.current) {
+          clearInterval(checkIntervalRef.current);
+          checkIntervalRef.current = null;
+        }
+      }, 15000);
+    }, 300);
 
     // Also check when DOM is ready
     if (document.readyState === 'complete') {
@@ -139,12 +197,16 @@ export const usePreloader = () => {
     } else {
       window.addEventListener('load', () => {
         clearTimeout(timeoutId);
-        setTimeout(checkImages, 100);
+        setTimeout(checkImages, 300);
       }, { once: true });
     }
 
     return () => {
       clearTimeout(timeoutId);
+      if (checkIntervalRef.current) {
+        clearInterval(checkIntervalRef.current);
+        checkIntervalRef.current = null;
+      }
       if (bodyCheckInterval) {
         clearInterval(bodyCheckInterval);
       }

@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import History from "@/components/History";
 import Management from "@/components/Management";
+import SpecialNote from "@/components/SpecialNote";
 import PoojaTimings from "@/components/PoojaTimings";
 import Vazhipaad from "@/components/Vazhipaad";
 import Calendar from "@/components/Calendar";
@@ -16,11 +17,12 @@ const Index = () => {
   usePreloader();
 
   return (
-    <div className="min-h-screen pt-20 sm:pt-16">
+    <div className="min-h-screen pt-16 sm:pt-16 md:pt-20">
       <Navbar />
       <Hero />
       <History />
       <Management />
+      <SpecialNote />
       <PoojaTimings />
       <Calendar />
       <Vazhipaad />

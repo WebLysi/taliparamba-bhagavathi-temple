@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero.jpg";
+import heroImage from "@/assets/temple-hero.webp";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 sm:px-8 text-center pt-20 sm:pt-16">
+      <div className="relative z-10 container mx-auto px-6 sm:px-8 text-center pt-16 sm:pt-16 md:pt-20">
         <div className="max-w-4xl mx-auto space-y-8">
           <img 
             src="/logo.png" 
