@@ -4,31 +4,29 @@ import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Import all images using Vite's glob import
-const committeeImages = import.meta.glob<{ default: string }>('@/assets/*.{png,jpg,jpeg,svg,webp}', { 
-  eager: true 
-});
+const committeeImages = import.meta.glob<{ default: string }>(
+  '/src/assets/**/*.{png,jpg,jpeg,svg,webp}',
+  { eager: true }
+);
 
 export default function CompactCommittee() {
   const { t } = useLanguage();
 
   // Helper function to get image path
   const getImageSrc = (imagePath: string) => {
-    if (!imagePath || imagePath.trim() === '') return null;
-    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
-      return imagePath;
-    }
-    if (imagePath.startsWith('/')) {
-      return imagePath;
-    }
-    const filename = imagePath.split('/').pop() || imagePath;
-    const found = Object.keys(committeeImages).find(key => 
-      key.endsWith(filename) || key.includes(filename)
-    );
+    if (!imagePath) return null;
+
+    // URL or public/ path
+    if (imagePath.startsWith('http')) return imagePath;
+    if (imagePath.startsWith('/')) return imagePath;
+
+    const filename = imagePath.split('/').pop()!;
     
-    if (found && committeeImages[found]) {
-      return committeeImages[found].default;
-    }
-    return `/${imagePath}`;
+    const found = Object.keys(committeeImages).find(
+      (key) => key.endsWith(filename)
+    );
+
+    return found ? committeeImages[found].default : null;
   };
 
   return (
