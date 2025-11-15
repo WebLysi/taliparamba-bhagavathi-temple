@@ -39,7 +39,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <p className="text-white/80 text-sm">{cf.email}</p>
+                <p className="text-white/80 text-sm leading-relaxed">{cf.email}</p>
               </div>
             </div>
           </div>

@@ -10,12 +10,14 @@ export default {
         gallery: "ചിത്രശാല",
         committee: "കമ്മിറ്റി",
     },
+    
     hero: {
         title: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം",
         subtitle: "പൂക്കോത്ത് തെരു, തളിപ്പറമ്പ",
         poojaTimings: "സമയം & ഉത്സവങ്ങൾ",
         vazhipaadDetails: "വഴിപാട് വിവരങ്ങൾ",
     },
+
     history: {
         title: "ഐതിഹ്യം",
         subtitle: "",
@@ -33,6 +35,7 @@ export default {
         zoomIn: "വലുതാക്കുക",
         zoomOut: "ചെറുതാക്കുക",
     },
+
     management: {
         title: "ക്ഷേത്ര നടത്തിപ്പ്",
         subtitle: "ആത്മീയ നേതൃത്വം",
@@ -57,6 +60,7 @@ export default {
             }
         ]
     },
+
     timings: {
         title: "പൂജ സമയം",
         subtitle: "ദിവസേന ആരാധന ഷെഡ്യൂൾ",
@@ -121,6 +125,7 @@ export default {
         booking3: "മുൻകൂർ ബുക്കിംഗിനായി ബന്ധപ്പെടുക: +91 9539531021",
         booking4: "ഉത്സവങ്ങൾക്കും അവസരങ്ങൾക്കുമായി പ്രത്യേക പാക്കേജുകൾ ലഭ്യമാണ്",
     },
+
     calendar: {
         title: "വാർഷിക കലണ്ടർ",
         subtitle: "",
@@ -144,19 +149,121 @@ export default {
             ],
         }
     },
+
     committee: {
-        title: "ക്ഷേത്ര കമ്മിറ്റി",
-        subtitle: "ദൈവത്തിന് സമർപ്പിത സേവനം",
-        managingCommittee: "ക്ഷേത്ര മാനേജിംഗ് കമ്മിറ്റി",
-        maathrisamithi: "മാതൃസമിതി (വനിതാ കമ്മിറ്റി)",
-        maathrisamithiDesc: "മാതൃസമിതി ക്ഷേത്ര ഉത്സവങ്ങളിൽ സജീവമായി പങ്കെടുക്കുകയും ഭക്തർക്കായി പ്രത്യേക പൂജകൾ സംഘടിപ്പിക്കുകയും വിവിധ ജീവകാരുണ്യ പ്രവർത്തനങ്ങൾ കൈകാര്യം ചെയ്യുകയും ചെയ്യുന്നു. ക്ഷേത്രത്തിന്റെ ആത്മീയവും സാംസ്കാരികവുമായ പാരമ്പര്യങ്ങൾ നിലനിർത്തുന്നതിൽ അവർ സുപ്രധാന പങ്ക് വഹിക്കുന്നു.",
-        president: "പ്രസിഡന്റ്",
-        vicePresident: "വൈസ് പ്രസിഡന്റ്",
-        secretary: "സെക്രട്ടറി",
-        treasurer: "ട്രഷറർ",
-        jointSecretary: "ജോയിന്റ് സെക്രട്ടറി",
-        member: "കമ്മിറ്റി അംഗം",
+        title: "Temple Committee",
+        subtitle: "Dedicated Service to the Divine",
+        members_title: "Committee Members",
+
+        committes: [
+            {
+                title: "Kshethra Committee",
+                desc: "",
+                key: "kshethra",
+                main: [ 
+                    { name: "Chandran P", position: "President", photo: "src/assets/kshethra-committee/1. Chandran P President New.webp" }, 
+                    { name: "Saseendran U", position: "Secretary", photo: "src/assets/kshethra-committee/2. Saseendran U Secretary.webp" }, 
+                    { name: "Mohanan K", position: "Treasurer", photo: "src/assets/kshethra-committee/3. Mohanan K Treasurer New.webp" }, 
+                    { name: "Sindu Vinod", position: "Vice President", photo: "src/assets/kshethra-committee/4. Sindu Vinod Vice President.webp" }, 
+                    { name: "Sreekala P V", position: "Jt. Secretary", photo: "src/assets/kshethra-committee/5. Sreekala P V Jt. Secretary.webp" }, 
+                    { name: "Mohanan M", position: "Vice President", photo: "src/assets/kshethra-committee/6. Mohanan M VIce President.webp" }, 
+                ],
+                members: [
+                    { name: "Gangadharan P", position: ""},
+                    { name: "Raghunath A K", position: ""},
+                    { name: "Vinod M G", position: ""},
+                    { name: "Dhanesan E", position: ""},
+                    { name: "Rajesh T", position: ""},
+                    { name: "Gangadharan M", position: ""},
+                    { name: "Rajeevan K P", position: ""},
+                    { name: "Ajithkumar K", position: ""},
+                    { name: "Lakshmanan P V", position: ""},
+                    { name: "Maneesan", position: ""},
+                    { name: "Gopidas", position: ""},
+                    { name: "Rajan A K", position: ""},
+                    { name: "Prathapan", position: ""},
+                    { name: "Padmini Chandran", position: ""},
+                    { name: "Rajalakshmi M", position: ""},
+                    { name: "Jayashree Mohanan", position: ""},
+                    { name: "Lakshmi T", position: ""},
+                    { name: "Roja Unnikrishnan", position: ""},
+                ],
+            },
+            {
+                title: "Mathrusamithi Committee",
+                desc: "The Mathrusamithi actively participates in temple festivals, organizes special poojas for devotees, and manages various charitable activities. They play a vital role in maintaining the temple's spiritual and cultural traditions.",
+                key: "maathri", 
+                main: [ 
+                    { name: "Roja Unnikrishnan", position: "President", photo: "src/assets/matrisamithi/1 ROJA UNNIKRISHNAN  PRESIDENT.webp" }, 
+                    { name: "Thara P Murali", position: "Secretary", photo: "src/assets/matrisamithi/2 THARA  P   MURALI  SECRETARY.webp" },
+                    { name: "Rajina P", position: "Jt. Secretary", photo: "src/assets/matrisamithi/3 RAJINA P.  Jt. SECRETARY.webp" },
+                ], 
+                members: [
+                    { name: "Rajalakshmi M", position: "" },
+                    { name: "Bindu Mohanan", position: "" },
+                    { name: "Bindu Anup", position: "" },
+                    { name: "Chandramathi", position: "" },
+                    { name: "Jayshree Mohanan", position: "" },
+                    { name: "Shobha Ramesan", position: "" },
+                    { name: "Lakshmi T", position: "" },
+                    { name: "Padmini", position: "" },
+                    { name: "Sindhu Vinod", position: "" },
+                    { name: "Praseeda Sukumaran", position: "" },
+                    { name: "Rajani Preman", position: "" },
+                    { name: "Sangeetha", position: "" },
+                    { name: "Sreeja", position: "" },
+                    { name: "Sreekalap V", position: "" },
+                    { name: "Thankamani", position: "" },
+                    { name: "Shyamala Sasidharan", position: "" },
+                    { name: "Usha Balan", position: "" },
+                    { name: "Balamani", position: "" },
+                    { name: "Vinatha Saseendran", position: "" },
+                ],
+            },
+            {
+                title: "Naveekarana Committee",
+                desc: "",
+                key: "naveekarana",
+                main: [ 
+                    { name: "Rajan AK", position: "President", photo: "src/assets/naveekarana-committee/1. Rajan AK President.webp" }, 
+                    { name: "Rajeevan M G", position: "Secretary", photo: "src/assets/naveekarana-committee/2. Rajeevan M G Secretary.webp" }, 
+                    { name: "Sreekala P V", position: "Treasurer", photo: "src/assets/naveekarana-committee/3. Sreekala P V Treasurer.webp" }, 
+                    { name: "Lakshmanan PV", position: "Vice President", photo: "src/assets/naveekarana-committee/4. Lakshmanan PV Vice President.webp" }, 
+                    { name: "Rajeevan K P", position: "Jt. Secretary", photo: "src/assets/naveekarana-committee/5. Rajeevan K P Jt. Secretary.webp" }, 
+                    { name: "Rajalakshmi M", position: "Vice President", photo: "src/assets/naveekarana-committee/6. Rajalakshmi M Vice President.webp" }, 
+                    { name: "Sindu Vinod", position: "Jt. Secreatary", photo: "src/assets/naveekarana-committee/7. Sindu Vinod Jt. Secreatary.webp" },  
+                ],
+                members: [
+                    { name: "Kumaran M", position: "" },
+                    { name: "Reghunath A K", position: "" },
+                    { name: "Gangadharan P", position: "" },
+                    { name: "Mohanan K", position: "" },
+                    { name: "Mohanan M", position: "" },
+                    { name: "Rajesh T", position: "" },
+                    { name: "Balakrishnan M", position: "" },
+                    { name: "Saseendran U", position: "" },
+                    { name: "Janardhanan M", position: "" },
+                    { name: "Prathapan V", position: "" },
+                    { name: "Dhanesan E", position: "" },
+                    { name: "Ramadas E N", position: "" },
+                    { name: "Shyamala Sasidharan", position: "" },
+                    { name: "Shobha Ramesan", position: "" },
+                    { name: "Roja Unnikrishnan", position: "" },
+                    { name: "Ramani Karunakaran", position: "" },
+                    { name: "Ramesan A", position: "" },
+                    { name: "Lakshmi T", position: "" },
+                    { name: "Chandran P", position: "" },
+                    { name: "Mani M", position: "" },
+                    { name: "Gangadharan Pattani", position: "" },
+                    { name: "Gopidas P", position: "" },
+                    { name: "Purushothaman V", position: "" },
+                    { name: "Ramesan P", position: "" },
+                    { name: "Jayashree Mohanan", position: "" },
+                ],
+            },
+        ],
     },
+
     gallery: {
         title: "ചിത്രശാല",
         subtitle: "വിശുദ്ധ ആഘോഷങ്ങളുടെ ഓർമ്മകൾ",
@@ -169,6 +276,7 @@ export default {
         morePhotos: "ഞങ്ങളുടെ ആഘോഷങ്ങളിൽ നിന്നും ദൈനംദിന ആചാരങ്ങളിൽ നിന്നുമുള്ള കൂടുതൽ ഫോട്ടോകൾ",
         viewAll: "എല്ലാ ഫോട്ടോകളും കാണുക",
     },
+
     specialNote: {
         title: "പ്രത്യേക അറിയിപ്പ്",
         content: "പുല, വാലായ്‌മ ഉള്ളവരോ, ലഹരി സാധനങ്ങൾ ഉപയോഗിച്ചോ, ഷർട്ട്, ബനിയൻ, ലുങ്കി എന്നിവ ധരിച്ചോ നാലമ്പലത്തിൽ പ്രവേശിക്കാൻ പാടുള്ളതല്ല.",
@@ -184,6 +292,7 @@ export default {
             {title: "നിർമ്മാണം വേഗത്തിലാക്കി പുനഃപ്രതിഷ്ഠാ ചടങ്ങ്", text: "ക്ഷേത്രത്തിന്റെ നിർമ്മാണം സമയബന്ധിതമായി പൂർത്തിയാക്കുന്നതിനായി വേഗത്തിലാക്കുകയും, തുടർന്ന് പുനഃപ്രതിഷ്ഠ കൂടാതെ ബ്രഹ്മകലശം എന്നീ ചടങ്ങുകൾ നടത്തുകയും ചെയ്യും"},
         ],
     },
+
     footer: {
         tagline: "പൂക്കോത്ത് തെരു, തളിപ്പറമ്പ",
         contact: "ഞങ്ങളെ ബന്ധപ്പെടുക",

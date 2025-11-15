@@ -1,117 +1,79 @@
+import React from "react";
 import { Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import committeeImage from "@/assets/committee-group.svg";
-import maathrisamithiImage from "@/assets/maathrisamithi-group.svg";
 import { useLanguage } from "@/context/LanguageContext";
 
-const Committee = () => {
-  const { cf, t } = useLanguage();
-  
-  const committeeMembers = [
-    { name: "Name", position: t.committee.president },
-    { name: "Name", position: t.committee.vicePresident },
-    { name: "Name", position: t.committee.secretary },
-    { name: "Name", position: t.committee.treasurer },
-    { name: "Name", position: t.committee.jointSecretary },
-    { name: "Name", position: t.committee.member },
-    { name: "Name", position: t.committee.member },
-    { name: "Name", position: t.committee.member },
-  ];
-
-  const maathrisamithiMembers = [
-    { name: "Name", position: t.committee.president },
-    { name: "Name", position: t.committee.vicePresident },
-    { name: "Name", position: t.committee.secretary },
-    { name: "Name", position: t.committee.treasurer },
-    { name: "Name", position: t.committee.jointSecretary },
-    { name: "Name", position: t.committee.member },
-  ];
+export default function CompactCommittee() {
+  const { t } = useLanguage();
 
   return (
-    <section id="committee" className="py-16 sm:py-20 bg-muted/30">
-      <div className="container mx-auto px-6 sm:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4">
-            <Users className="w-10 h-10 sm:w-8 sm:h-8 text-white" />
+    <section id="committee" className="py-12 bg-muted/20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary mb-4">
+            <Users className="w-7 h-7 text-white" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 px-4">
-            {t.committee.title}
-          </h2>
-          <p className="text-xl sm:text-xl text-muted-foreground">{t.committee.subtitle}</p>
+          <h2 className="text-2xl font-bold text-foreground">{t.committee.title}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t.committee.subtitle}</p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16">
-          {/* Main Committee */}
-          <Card className="overflow-hidden shadow-soft border-primary/20">
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 sm:p-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-foreground text-center">
-                {t.committee.managingCommittee}
-              </h3>
-            </div>
-            
-            <div className="p-6 sm:p-8">
-              <div className="mb-8 sm:mb-10 rounded-lg overflow-hidden shadow-soft">
-                <img
-                  src={committeeImage}
-                  alt="Temple Committee Group"
-                  className="w-full object-cover"
-                />
+        <div className="space-y-6 max-w-6xl mx-auto">
+          {t.committee.committes.map((committe) => (
+            <Card key={committe.key} className="p-3 border-primary/10">
+              <div className="px-2 py-3 border-b border-primary/10 mb-3">
+                <h3 className="text-base font-semibold text-foreground text-center">{committe.title}</h3>
               </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-                {committeeMembers.map((member, index) => (
-                  <div
-                    key={index}
-                    className="p-5 sm:p-4 bg-muted/50 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
+              <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                {committe.main.map((member, idx) => (
+                  <article
+                    key={idx}
+                    className="flex flex-col h-full bg-white rounded-md overflow-hidden border border-primary/10 hover:shadow-md transition-all"
+                    aria-label={`${member.name} - ${member.position}`}
                   >
-                    <h4 className="font-bold text-foreground text-lg sm:text-base">{member.name}</h4>
-                    <p className="text-base sm:text-sm text-muted-foreground">{member.position}</p>
-                  </div>
+                    <div className="w-full h-full bg-gray-200 overflow-hidden flex items-center justify-center">
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-center block"
+                      />
+                    </div>
+
+                    <div className="p-2 md:p-3 flex-1 flex flex-col justify-start">
+                      <h4 className="text-xs sm:text-sm md:text-base font-semibold leading-tight">{member.name}</h4>
+                      <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground leading-tight mt-1">{member.position}</p>
+                    </div>
+                  </article>
                 ))}
               </div>
-            </div>
-          </Card>
-
-          {/* Maathrisamithi */}
-          <Card className="overflow-hidden shadow-soft border-primary/20">
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 sm:p-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-foreground text-center">
-                {t.committee.maathrisamithi}
-              </h3>
-            </div>
-            
-            <div className="p-6 sm:p-8">
-              <div className="mb-8 sm:mb-10 rounded-lg overflow-hidden shadow-soft">
-                <img
-                  src={maathrisamithiImage}
-                  alt="Maathrisamithi Group"
-                  className="w-full object-cover"
-                />
+              
+              <div className="px-2 py-3 mb-2 md:mb-3">
+                <h3 className="text-base font-semibold text-muted-foreground text-center">{t.committee.members_title}</h3>
               </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-                {maathrisamithiMembers.map((member, index) => (
-                  <div
-                    key={index}
-                    className="p-5 sm:p-4 bg-muted/50 rounded-lg border border-accent/20 hover:border-accent/40 transition-colors"
+              
+              <Card className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 p-2 md:p-3 my-1 md:my-2 border-primary/10">
+                {committe.members.map((member, idx) => (
+                  <article
+                    key={idx}
+                    className="flex flex-col h-full bg-white rounded-md overflow-hidden border border-primary/10 hover:shadow-md transition-all"
+                    aria-label={`${member.name} - ${member.position}`}
                   >
-                    <h4 className="font-bold text-foreground text-lg sm:text-base">{member.name}</h4>
-                    <p className="text-base sm:text-sm text-muted-foreground">{member.position}</p>
-                  </div>
+                    <div className="p-2 md:p-3 flex-1 flex flex-col justify-start">
+                      <h4 className="text-[10px] sm:text-sm md:text-base font-semibold leading-tight">{member.name}</h4>
+                    </div>
+                  </article>
                 ))}
-              </div>
-
-              <div className="mt-8 sm:mt-6 p-6 sm:p-5 bg-accent/5 rounded-lg border-l-4 border-accent">
-                <p className="text-foreground/90 leading-relaxed text-lg sm:text-base">
-                  {t.committee.maathrisamithiDesc}
-                </p>
-              </div>
-            </div>
-          </Card>
+              </Card>
+              
+              {committe.desc && (
+                <div className="mt-3 p-3 bg-accent/5 rounded-md border-l-4 border-accent text-sm text-foreground/90">
+                  {committe.desc}
+                </div>
+              )}
+            </Card>
+          ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Committee;
+}
