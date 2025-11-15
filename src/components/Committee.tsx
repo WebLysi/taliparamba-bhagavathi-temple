@@ -3,8 +3,33 @@ import { Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
 
+// Import all images using Vite's glob import
+const committeeImages = import.meta.glob<{ default: string }>('@/assets/*.{png,jpg,jpeg,svg,webp}', { 
+  eager: true 
+});
+
 export default function CompactCommittee() {
   const { t } = useLanguage();
+
+  // Helper function to get image path
+  const getImageSrc = (imagePath: string) => {
+    if (!imagePath || imagePath.trim() === '') return null;
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+      return imagePath;
+    }
+    if (imagePath.startsWith('/')) {
+      return imagePath;
+    }
+    const filename = imagePath.split('/').pop() || imagePath;
+    const found = Object.keys(committeeImages).find(key => 
+      key.endsWith(filename) || key.includes(filename)
+    );
+    
+    if (found && committeeImages[found]) {
+      return committeeImages[found].default;
+    }
+    return `/${imagePath}`;
+  };
 
   return (
     <section id="committee" className="py-12 bg-muted/20">
@@ -25,7 +50,10 @@ export default function CompactCommittee() {
               </div>
 
               <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-                {committe.main.map((member, idx) => (
+                {committe.main.map((member, idx) => {
+                  const imageSrc = getImageSrc(member.photo);
+
+                  return (
                   <article
                     key={idx}
                     className="flex flex-col h-full bg-white rounded-md overflow-hidden border border-primary/10 hover:shadow-md transition-all"
@@ -33,7 +61,7 @@ export default function CompactCommittee() {
                   >
                     <div className="w-full h-full bg-gray-200 overflow-hidden flex items-center justify-center">
                       <img
-                        src={member.photo}
+                        src={imageSrc}
                         alt={member.name}
                         className="w-full h-full object-cover object-center block"
                       />
@@ -44,7 +72,7 @@ export default function CompactCommittee() {
                       <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground leading-tight mt-1">{member.position}</p>
                     </div>
                   </article>
-                ))}
+                )})}
               </div>
               
               <div className="px-2 py-3 mb-2 md:mb-3">
