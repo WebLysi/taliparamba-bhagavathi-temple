@@ -1,5 +1,5 @@
 import { Building2 } from "lucide-react";
-import architectureImage from "@/assets/temple-architecture-3d.svg";
+import architectureImage from "@/assets/temple-architecture.webp";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Architecture = () => {

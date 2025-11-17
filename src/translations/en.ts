@@ -279,7 +279,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
 
     architecture: {
         title: "Infrastructural Developments",
-        subtitle: "3D Architecture & Expansion Plans",
+        subtitle: "Architecture & Expansion Plans",
         points: [
             {title: "New Bhadrakali Temple Construction", text: "Construction of a new Bhadrakali Temple with traditional temple architecture, adhering to Agama Shastra and spiritual design principles."},
             {title: "Parashakti Consecration in Vayu Kona", text: "New consecration (Prathishta) of the deity Parashakti in the North-West corner (Vayu Kona) of the temple complex, including the installation of a Peetha (pedestal) and stone idol (Shila Vigraham)."},
