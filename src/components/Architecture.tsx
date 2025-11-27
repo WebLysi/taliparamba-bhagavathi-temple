@@ -13,7 +13,7 @@ const Architecture = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4 animate-float">
             <Building2 className="w-10 h-10 sm:w-8 sm:h-8 text-white" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 px-4">
             {t.architecture.title}
           </h2>
           <p className="text-xl sm:text-xl text-muted-foreground">{t.architecture.subtitle}</p>
@@ -31,10 +31,10 @@ const Architecture = () => {
           <div className="mt-8 sm:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {developmentPoints.map((point: any, index: number) => (
               <div className="bg-card p-6 sm:p-8 rounded-lg shadow-soft">
-                <h3 className="text-2xl sm:text-xl font-bold text-card-foreground mb-4 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-card-foreground mb-4 sm:mb-3">
                   {point.title}
                 </h3>
-                <p className="text-muted-foreground text-lg sm:text-base leading-relaxed">
+                <p className="text-sm sm:text-lg md:text-xl text-muted-foreground text-lg sm:text-base leading-relaxed">
                   {point.text}
                 </p>
               </div>

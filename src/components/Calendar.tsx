@@ -15,7 +15,7 @@ const Calendar = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4 animate-float">
             <CalendarIcon className="w-10 h-10 sm:w-8 sm:h-8 text-white" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[hsl(var(--manuscript-text))] mb-4 px-4" style={{ fontFamily: 'Georgia, serif' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[hsl(var(--manuscript-text))] mb-4 px-4" style={{ fontFamily: 'Georgia, serif' }}>
             {t.calendar.title}
           </h2>
           <p className="text-xl sm:text-xl text-[hsl(var(--manuscript-accent))]" style={{ fontFamily: 'Georgia, serif' }}>{t.calendar.subtitle}</p>

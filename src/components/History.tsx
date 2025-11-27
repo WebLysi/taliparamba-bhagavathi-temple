@@ -23,7 +23,7 @@ const History = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4 animate-float">
             <BookOpen className="w-10 h-10 sm:w-8 sm:h-8 text-white" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 px-4">
             {t.history.title}
           </h2>
           <p className="text-xl sm:text-xl text-muted-foreground">{t.history.subtitle}</p>
@@ -82,7 +82,7 @@ const History = () => {
           >
             {/* Decorative header */}
             <div className="text-center pb-6 border-b-2 border-[hsl(var(--manuscript-accent))]">
-              <div className="text-2xl sm:text-3xl font-bold text-[hsl(var(--manuscript-text))] mb-2">
+              <div className="text-lg sm:text-xl md:text-2xl font-bold text-[hsl(var(--manuscript-text))] mb-2">
                 {t.history.name}
               </div>
               <div className="text-sm text-[hsl(var(--manuscript-border))]">

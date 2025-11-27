@@ -34,7 +34,7 @@ const Vazhipaad = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 sm:mb-4 animate-float">
             <Gift className="w-10 h-10 sm:w-8 sm:h-8 text-white" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 px-4">
             {t.vazhipaad.title}
           </h2>
           <p className="text-xl sm:text-xl text-muted-foreground">{t.vazhipaad.subtitle}</p>
@@ -82,14 +82,14 @@ const Vazhipaad = () => {
         </div>
 
         <Card className="max-w-4xl mx-auto mt-12 p-3 sm:p-8 md:p-10 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/30 shadow-soft animate-scale-in">
-          <h2 className="text-lg sm:text-xl font-bold text-foreground text-center">
+          <h2 className="text-sm sm:text-xl font-bold text-foreground text-center">
             {t.vazhipaad.booking3}
           </h2>
           <div className="mt-4 flex justify-center">
             {(() => {
               const href = `https://wa.me/${cf.whatsapp}`;
               return (
-                <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
+                <Button asChild className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
                   <a href={href} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                     <span className="inline-flex items-center">
                       <MessageCircle className="w-4 h-4 mr-2" />
