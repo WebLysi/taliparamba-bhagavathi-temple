@@ -134,7 +134,7 @@ export default {
         event: {
             months: "വിശേഷ ദിവസങ്ങൾ",
             events: [
-              { date: "", name: "പ്രതിഷ്‌ഠാദിനം-മകരം 6,7 (ജനുവരി)", description: "" },
+              { date: "മകരം 6,7 (ജനുവരി)", name: "പ്രതിഷ്‌ഠാദിനം", description: "ദേവതയുടെ പ്രതിഷ്ഠാദിനം" },
               { date: "", name: "മഹാശിവരാത്രി", description: "" },
               { date: "", name: "മീന മാസം പൂരം", description: "" },
               { date: "", name: "വിഷുക്കണി - മേടമാസം (ഏപ്രിൽ)", description: "" },
@@ -166,6 +166,7 @@ export default {
                     { name: "Mohanan K", position: "Treasurer", photo: "kshethra-committee/3. Mohanan K Treasurer New.webp" }, 
                     { name: "Sindu Vinod", position: "Vice President", photo: "kshethra-committee/4. Sindu Vinod Vice President.webp" }, 
                     { name: "Sreekala P V", position: "Jt. Secretary", photo: "kshethra-committee/5. Sreekala P V Jt. Secretary.webp" }, 
+                    { name: "Prema AK", position: "Jt. Secretary", photo: "kshethra-committee/7. Prema AK joint secretary.webp" },
                     { name: "Mohanan M", position: "Vice President", photo: "kshethra-committee/6. Mohanan M VIce President.webp" }, 
                 ],
                 members: [
@@ -194,6 +195,7 @@ export default {
                 desc: "The Mathrusamithi actively participates in temple festivals, organizes special poojas for devotees, and manages various charitable activities. They play a vital role in maintaining the temple's spiritual and cultural traditions.",
                 key: "maathri", 
                 main: [ 
+                    { name: "Devi", position: "President", photo: "matrisamithi/5. Devi (President).webp" },
                     { name: "Roja Unnikrishnan", position: "President", photo: "matrisamithi/1 ROJA UNNIKRISHNAN  PRESIDENT.webp" }, 
                     { name: "Thara P Murali", position: "Secretary", photo: "matrisamithi/2 THARA  P   MURALI  SECRETARY.webp" },
                     { name: "Rajina P", position: "Jt. Secretary", photo: "matrisamithi/3 RAJINA P.  Jt. SECRETARY.webp" },

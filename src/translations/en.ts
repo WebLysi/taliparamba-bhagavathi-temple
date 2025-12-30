@@ -77,7 +77,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
     vazhipaad: {
         title: "Offerings Details",
         subtitle: "",
-        name: "Name",
+        name: "Particulars",
         price: "Price",
         items: [
             { name: "Neyy Vilakku", price: "₹20.00" },
@@ -138,7 +138,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         event: {
             months: "Festival Calendar",
             events: [
-              { date: "", name: "Prathishta Dinam: Makaram 6, 7 (January)", description: "Installation Day of the Deity" },
+              { date: "Makaram 6, 7 (January)", name: "Prathishta Dinam", description: "Installation Day of the Deity" },
               { date: "", name: "Mahashivaratri", description: "A major Hindu festival dedicated to Lord Shiva" },
               { date: "", name: "Meena Masam Pooram", description: "Pooram star in the Malayalam month of Meenam" },
               { date: "", name: "Vishukkani: Medamasam (April) ", description: "The traditional Hindu new year celebration in Kerala" },
@@ -170,6 +170,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                     { name: "Mohanan K", position: "Treasurer", photo: "kshethra-committee/3. Mohanan K Treasurer New.webp" }, 
                     { name: "Sindu Vinod", position: "Vice President", photo: "kshethra-committee/4. Sindu Vinod Vice President.webp" }, 
                     { name: "Sreekala P V", position: "Jt. Secretary", photo: "kshethra-committee/5. Sreekala P V Jt. Secretary.webp" }, 
+                    { name: "Prema AK", position: "Jt. Secretary", photo: "kshethra-committee/7. Prema AK joint secretary.webp" },
                     { name: "Mohanan M", position: "Vice President", photo: "kshethra-committee/6. Mohanan M VIce President.webp" }, 
                 ],
                 members: [
@@ -198,6 +199,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                 desc: "The Mathrusamithi actively participates in temple festivals, organizes special poojas for devotees, and manages various charitable activities. They play a vital role in maintaining the temple's spiritual and cultural traditions.",
                 key: "maathri", 
                 main: [ 
+                    { name: "Devi", position: "President", photo: "matrisamithi/5. Devi (President).webp" },
                     { name: "Roja Unnikrishnan", position: "President", photo: "matrisamithi/1 ROJA UNNIKRISHNAN  PRESIDENT.webp" }, 
                     { name: "Thara P Murali", position: "Secretary", photo: "matrisamithi/2 THARA  P   MURALI  SECRETARY.webp" },
                     { name: "Rajina P", position: "Jt. Secretary", photo: "matrisamithi/3 RAJINA P.  Jt. SECRETARY.webp" },

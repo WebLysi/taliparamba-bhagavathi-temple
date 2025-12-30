@@ -35,7 +35,7 @@ const Hero = () => {
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight px-4 animate-fade-in">
             {t.hero.title}
           </h1>
-          <p className="text-xl sm:text-lg md:text-xl text-muted-foreground font-medium px-4 animate-slide-up">
+          <p className="text-xl sm:text-lg md:text-xl font-bold text-foreground font-medium px-4 animate-slide-up">
             {t.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-8 px-4">
