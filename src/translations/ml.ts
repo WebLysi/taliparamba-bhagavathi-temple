@@ -197,7 +197,7 @@ export default {
                 main: [ 
                     { name: "ദേവി", position: "പ്രസിഡന്റ്‌", photo: "matrisamithi/5. Devi (President).webp" },
                     { name: "റോജ ഉണ്ണികൃഷ്ണൻ", position: "പ്രസിഡന്റ്‌", photo: "matrisamithi/1 ROJA UNNIKRISHNAN  PRESIDENT.webp" }, 
-                    { name: "താര പി മുരളി", position: "സെക്രട്ടറി", photo: "matrisamithi/2 THARA  P  MURALI  SECRETARY.webp" },
+                    { name: "താര പി മുരളി", position: "സെക്രട്ടറി", photo: "matrisamithi/2 THARA  P   MURALI  SECRETARY.webp" },
                     { name: "റജിന പി", position: "ജോ. സെക്രട്ടറി", photo: "matrisamithi/3 RAJINA P.  Jt. SECRETARY.webp" },
                 ], 
                 members: [

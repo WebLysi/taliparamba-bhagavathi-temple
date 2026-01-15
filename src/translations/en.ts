@@ -196,7 +196,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
             },
             {
                 title: "Mathrusamithi Committee",
-                desc: "The Mathrusamithi actively participates in temple festivals, organizes special poojas for devotees, and manages various charitable activities. They play a vital role in maintaining the temple's spiritual and cultural traditions.",
+                desc: "",
                 key: "maathri", 
                 main: [ 
                     { name: "Devi", position: "President", photo: "matrisamithi/5. Devi (President).webp" },
