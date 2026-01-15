@@ -155,8 +155,8 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
     },
 
     committee: {
-        title: "Temple Committee",
-        subtitle: "Dedicated Service to the Divine",
+        title: "Temple Administration",
+        subtitle: "",
         members_title: "Committee Members",
 
         committes: [
@@ -169,13 +169,13 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                     { name: "Saseendran U", position: "Secretary", photo: "kshethra-committee/2. Saseendran U Secretary.webp" }, 
                     { name: "Mohanan K", position: "Treasurer", photo: "kshethra-committee/3. Mohanan K Treasurer New.webp" }, 
                     { name: "Sindu Vinod", position: "Vice President", photo: "kshethra-committee/4. Sindu Vinod Vice President.webp" }, 
-                    { name: "Sreekala P V", position: "Jt. Secretary", photo: "kshethra-committee/5. Sreekala P V Jt. Secretary.webp" }, 
-                    { name: "Prema AK", position: "Jt. Secretary", photo: "kshethra-committee/7. Prema AK joint secretary.webp" },
                     { name: "Mohanan M", position: "Vice President", photo: "kshethra-committee/6. Mohanan M VIce President.webp" }, 
+                    { name: "Sreekala P V", position: "Jt. Secretary", photo: "kshethra-committee/5. Sreekala P V Jt. Secretary.webp" }, 
+                    { name: "Prema AK", position: "Jt. Secretary", photo: "kshethra-committee/7. Prema AK joint secretary.webp" },                   
                 ],
                 members: [
                     { name: "Gangadharan P", position: ""},
-                    { name: "Raghunath A K", position: ""},
+                    { name: "A K Raghunath", position: ""},
                     { name: "Vinod M G", position: ""},
                     { name: "Dhanesan E", position: ""},
                     { name: "Rajesh T", position: ""},
@@ -218,7 +218,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                     { name: "Rajani Preman", position: "" },
                     { name: "Sangeetha", position: "" },
                     { name: "Sreeja", position: "" },
-                    { name: "Sreekalap V", position: "" },
+                    { name: "Sreekala PV", position: "" },
                     { name: "Thankamani", position: "" },
                     { name: "Shyamala Sasidharan", position: "" },
                     { name: "Usha Balan", position: "" },
@@ -235,13 +235,13 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                     { name: "Rajeevan M G", position: "Secretary", photo: "naveekarana-committee/2. Rajeevan M G Secretary.webp" }, 
                     { name: "Sreekala P V", position: "Treasurer", photo: "naveekarana-committee/3. Sreekala P V Treasurer.webp" }, 
                     { name: "Lakshmanan PV", position: "Vice President", photo: "naveekarana-committee/4. Lakshmanan PV Vice President.webp" }, 
-                    { name: "Rajeevan K P", position: "Jt. Secretary", photo: "naveekarana-committee/5. Rajeevan K P Jt. Secretary.webp" }, 
                     { name: "Rajalakshmi M", position: "Vice President", photo: "naveekarana-committee/6. Rajalakshmi M Vice President.webp" }, 
+                    { name: "Rajeevan K P", position: "Jt. Secretary", photo: "naveekarana-committee/5. Rajeevan K P Jt. Secretary.webp" }, 
                     { name: "Sindu Vinod", position: "Jt. Secreatary", photo: "naveekarana-committee/7. Sindu Vinod Jt. Secreatary.webp" },  
                 ],
                 members: [
                     { name: "Kumaran M", position: "" },
-                    { name: "Reghunath A K", position: "" },
+                    { name: "A K Reghunath", position: "" },
                     { name: "Gangadharan P", position: "" },
                     { name: "Mohanan K", position: "" },
                     { name: "Mohanan M", position: "" },
@@ -266,6 +266,14 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                     { name: "Ramesan P", position: "" },
                     { name: "Jayashree Mohanan", position: "" },
                 ],
+            },
+            {
+                title: "Kshethram kazhakam",
+                desc: "",
+                key: "kazhakam",
+                main: [ 
+                    { name: "Karthyaaayini", position: "", photo: "kshethram-kazhakam/Karthyaaayini.webp" }, 
+                ]
             },
         ],
     },

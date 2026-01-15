@@ -73,24 +73,32 @@ export default function CompactCommittee() {
                 )})}
               </div>
               
-              <div className="px-2 py-3 mb-2 md:mb-3">
-                <h3 className="text-base font-semibold text-muted-foreground text-center">{t.committee.members_title}</h3>
-              </div>
-              
-              <Card className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 p-2 md:p-3 my-1 md:my-2 border-primary/10">
-                {committe.members.map((member, idx) => (
-                  <article
-                    key={idx}
-                    className="flex flex-col h-full bg-white rounded-md overflow-hidden border border-primary/10 hover:shadow-md transition-all"
-                    aria-label={`${member.name} - ${member.position}`}
-                  >
-                    <div className="p-2 md:p-3 flex-1 flex flex-col justify-start">
-                      <h4 className="text-[10px] sm:text-sm md:text-base font-semibold leading-tight">{member.name}</h4>
-                    </div>
-                  </article>
-                ))}
-              </Card>
-              
+              {committe.members && committe.members.length > 0 && (
+                <>
+                  <div className="px-2 py-3 mb-2 md:mb-3">
+                    <h3 className="text-base font-semibold text-muted-foreground text-center">
+                      {t.committee.members_title}
+                    </h3>
+                  </div>
+
+                  <Card className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 p-2 md:p-3 my-1 md:my-2 border-primary/10">
+                    {committe.members.map((member, idx) => (
+                      <article
+                        key={idx}
+                        className="flex flex-col h-full bg-white rounded-md overflow-hidden border border-primary/10 hover:shadow-md transition-all"
+                        aria-label={`${member.name} - ${member.position}`}
+                      >
+                        <div className="p-2 md:p-3 flex-1 flex flex-col justify-start">
+                          <h4 className="text-[10px] sm:text-sm md:text-base font-semibold leading-tight">
+                            {member.name}
+                          </h4>
+                        </div>
+                      </article>
+                    ))}
+                  </Card>
+                </>
+              )}
+
               {committe.desc && (
                 <div className="mt-3 p-3 bg-accent/5 rounded-md border-l-4 border-accent text-sm text-foreground/90">
                   {committe.desc}
