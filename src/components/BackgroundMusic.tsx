@@ -6,55 +6,47 @@ import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 
 const BackgroundMusic = () => {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isInteracted, setIsInteracted] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
       audio.volume = 0.5;
-
-      // Strategy: Start muted to bypass autoplay restrictions, then unmute
-      // Most browsers allow muted autoplay
       audio.muted = true;
 
-      const playPromise = audio.play();
+      // Listen for any user interaction to start music
+      const startMusicOnInteraction = () => {
+        if (!isInteracted && audio) {
+          audio.muted = false; // Unmute on first interaction
+          audio.play().catch((e) => console.log('Play failed:', e));
+          setIsMuted(false);
+          setIsInteracted(true);
+          
+          // Remove listeners after first interaction
+          ['click', 'keydown', 'touchstart'].forEach((event) =>
+            document.removeEventListener(event, startMusicOnInteraction)
+          );
+        }
+      };
 
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            // Successfully started playing (muted)
-            // Unmute after a short delay to allow playback to start
-            setTimeout(() => {
-              if (audio) {
-                audio.muted = false;
-                setIsMuted(false);
-              }
-            }, 100);
-          })
-          .catch((error) => {
-            console.log('Autoplay blocked by browser policy:', error);
-            // Fallback: Try to play on ANY interaction
-            const forcePlay = () => {
-              audio.muted = false;
-              audio.play().catch((e) => console.error('Retry failed', e));
-              ['click', 'keydown', 'touchstart'].forEach((event) =>
-                document.removeEventListener(event, forcePlay)
-              );
-            };
+      ['click', 'keydown', 'touchstart'].forEach((event) =>
+        document.addEventListener(event, startMusicOnInteraction, { once: true })
+      );
 
-            ['click', 'keydown', 'touchstart'].forEach((event) =>
-              document.addEventListener(event, forcePlay, { once: true })
-            );
-          });
-      }
+      return () => {
+        ['click', 'keydown', 'touchstart'].forEach((event) =>
+          document.removeEventListener(event, startMusicOnInteraction)
+        );
+      };
     }
-  }, []);
+  }, [isInteracted]);
 
   const toggleMute = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (!audioRef.current) return;
-    audioRef.current.muted = !isMuted;
+    audioRef.current.muted = isMuted;
     setIsMuted(!isMuted);
   };
 
