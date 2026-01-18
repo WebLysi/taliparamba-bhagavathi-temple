@@ -53,7 +53,7 @@ export default {
                 mentioned: ""
             },
             {
-                position: "മാനേജിംഗ് ട്രസ്റ്റി / രക്ഷാധികാരി",
+                position: "മാനേജിങ് ട്രസ്റ്റി / രക്ഷാധികാരി",
                 name: "എ. കെ. രഘുനാഥൻ",
                 image: "rakshaadhikaari.webp",
                 mentioned: ""
@@ -195,7 +195,7 @@ export default {
                 desc: "",
                 key: "paripaalika",
                 main: [ 
-                    { name: "ക്ഷേത്രം പരിപാലിക", position: "", photo: "kshethram-paripaalika/kshethram-paripaalika.webp" }, 
+                    { name: "എം മീനാക്ഷി", position: "ക്ഷേത്രം പരിപാലിക", photo: "kshethram-paripaalika/kshethram-paripaalika.webp" }, 
                 ]
             },
             {

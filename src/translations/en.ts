@@ -199,7 +199,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                 desc: "",
                 key: "paripaalika",
                 main: [ 
-                    { name: "Kshethram Paripaalika", position: "", photo: "kshethram-paripaalika/kshethram-paripaalika.webp" }, 
+                    { name: "M Meenakshi", position: "Kshethram Paripaalika", photo: "kshethram-paripaalika/kshethram-paripaalika.webp" }, 
                 ]
             },
             {
