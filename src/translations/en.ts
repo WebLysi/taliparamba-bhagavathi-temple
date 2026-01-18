@@ -56,7 +56,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                 mentioned: ""
             },
             {
-                position: "Temple Rakshaadhikaari",
+                position: "Managing Trustee / Rakshaadhikaari",
                 name: "A. K. Reghunathan",
                 image: "rakshaadhikaari.webp",
                 mentioned: ""
@@ -138,7 +138,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         event: {
             months: "Festival Calendar",
             events: [
-              { date: "Makaram 6, 7 (January)", name: "Prathishta Dinam", description: "Installation Day of the Deity" },
+              { date: "Makaram 6, 7 (January)", name: "Prathishta Dinam / Makara Pongaala", description: "Installation Day of the Deity" },
               { date: "", name: "Mahashivaratri", description: "A major Hindu festival dedicated to Lord Shiva" },
               { date: "", name: "Meena Masam Pooram", description: "Pooram star in the Malayalam month of Meenam" },
               { date: "", name: "Vishukkani: Medamasam (April) ", description: "The traditional Hindu new year celebration in Kerala" },
@@ -161,7 +161,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
 
         committes: [
             {
-                title: "Kshethra Committee",
+                title: "Kshethram Bharanasamithi",
                 desc: "",
                 key: "kshethra",
                 main: [ 
@@ -193,6 +193,14 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
                     { name: "Lakshmi T", position: ""},
                     { name: "Roja Unnikrishnan", position: ""},
                 ],
+            },
+            {
+                title: "Kshethram Paripaalika",
+                desc: "",
+                key: "paripaalika",
+                main: [ 
+                    { name: "Kshethram Paripaalika", position: "", photo: "kshethram-paripaalika/kshethram-paripaalika.webp" }, 
+                ]
             },
             {
                 title: "Mathrusamithi Committee",
