@@ -45,13 +45,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 sm:px-8 text-center pt-16 sm:pt-16 md:pt-20">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-4">
           <img 
             src="/logo.png" 
             alt="Temple Logo" 
-            className="hidden lg:inline w-24 h-24 sm:w-20 sm:h-20 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-5xl sm:text-4xl font-bold mb-8 shadow-divine animate-float"
+            className="hidden lg:inline w-16 h-16 opacity-80 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-5xl sm:text-4xl font-bold mb-1 shadow-divine animate-float"
           />
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight px-4 animate-fade-in">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight px-4 animate-fade-in">
             {t.hero.title}
           </h1>
           <p className="text-xl sm:text-lg md:text-xl font-bold text-foreground font-medium px-4 animate-slide-up">
@@ -61,13 +61,13 @@ const Hero = () => {
             <div ref={topButtonsRef} className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
               <button
                 onClick={() => scrollToId("#timings")}
-                className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
               >
                 {t.hero.poojaTimings}
               </button>
               <button
                 onClick={() => scrollToId("#vazhipaad")}
-                className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-card text-foreground text-sm sm:text-base border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
+                className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
               >
                 {t.hero.vazhipaadDetails}
               </button>

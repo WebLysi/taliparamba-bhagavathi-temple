@@ -57,9 +57,8 @@ const Navbar = () => {
               alt="Temple Logo" 
               className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
             />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent truncate">
+            <span className="text-sm sm:text-sm md:text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent truncate">
               <span className="hidden lg:inline">{t.hero.title}</span>
-              <span className="lg:hidden hidden sm:inline">Taliparamba Temple</span>
             </span>
           </div>
 

@@ -319,24 +319,24 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         upiId: "UPI ID",
         types: [
             {
-                title: "Temple Committee",
+                title: "Temple Donation",
                 qrCode: "upi-qr/temple-qr.webp",
                 upiId: "202601prt73wrbxrronpstqrsbrp@cbin",
                 accountDetails: {
-                    accountName: "TALIPARANBA SREE BHAGAVATHI TEMPLE",
-                    accountNumber: "3588847183",
+                    accountName: "TALIPARAMBA SREE BHAGAVATHI TEMPLE",
+                    accountNumber: "5929465900",
                     bankName: "Central Bank of India",
                     ifscCode: "CBIN0284514",
                 },
                 upiUrl: "upi://pay?pa=202601prt73wrbxrronpstqrsbrp@cbin&cu=INR",
             },
             {
-                title: "Development Committee",
+                title: "Renovation Donation",
                 qrCode: "upi-qr/trust-qr.webp",
                 upiId: "202510prteim7nzfpwnpstqrsbrp@cbin",
                 accountDetails: {
-                    accountName: "TALIPARANBA SREE BHAGAVATHI TRUST",
-                    accountNumber: "5929465900",
+                    accountName: "TALIPARAMBA SREE BHAGAVATHI TRUST",
+                    accountNumber: "3588847183",
                     bankName: "Central Bank of India",
                     ifscCode: "CBIN0284514",
                 },

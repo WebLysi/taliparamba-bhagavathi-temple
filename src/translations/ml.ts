@@ -324,25 +324,25 @@ export default {
         upiId: "UPI ID",
         types: [
             {
-                title: "ക്ഷേത്രം",
+                title: "ക്ഷേത്രം സംഭാവന",
                 qrCode: "upi-qr/temple-qr.webp",
                 upiId: "202601prt73wrbxrronpstqrsbrp@cbin",
                 accountDetails: {
                     accountName: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം",
-                    accountNumber: "3588847183",
-                    bankName: "Central Bank of India",
+                    accountNumber: "5929465900",
+                    bankName: "സെൻട്രൽ ബാങ്ക് ഓഫ് ഇന്ത്യ",
                     ifscCode: "CBIN0284514",
                 },
                 upiUrl: "upi://pay?pa=202601prt73wrbxrronpstqrsbrp@cbin&cu=INR",
             },
             {
-                title: "വികസന കമ്മിറ്റി",
+                title: "നവീകരണ സംഭാവന",
                 qrCode: "upi-qr/trust-qr.webp",
                 upiId: "202510prteim7nzfpwnpstqrsbrp@cbin",
                 accountDetails: {
                     accountName: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം വികസനം",
-                    accountNumber: "5929465900",
-                    bankName: "Central Bank of India",
+                    accountNumber: "3588847183",
+                    bankName: "സെൻട്രൽ ബാങ്ക് ഓഫ് ഇന്ത്യ",
                     ifscCode: "CBIN0284514",
                 },
                 upiUrl: "upi://pay?pa=202510prteim7nzfpwnpstqrsbrp@cbin&cu=INR",
