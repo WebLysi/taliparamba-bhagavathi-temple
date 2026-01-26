@@ -1,8 +1,27 @@
 import heroImage from "@/assets/temple-hero.webp";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
   const { cf, t } = useLanguage();
+  const topButtonsRef = useRef<HTMLDivElement>(null);
+  const bottomButtonRef = useRef<HTMLButtonElement>(null);
+  const [buttonWidth, setButtonWidth] = useState<string>("100%");
+
+  useEffect(() => {
+    const updateButtonWidth = () => {
+      if (topButtonsRef.current && bottomButtonRef.current && window.innerWidth >= 640) {
+        const topButtonsWidth = topButtonsRef.current.offsetWidth;
+        setButtonWidth(`${topButtonsWidth}px`);
+      } else {
+        setButtonWidth("100%");
+      }
+    };
+
+    updateButtonWidth();
+    window.addEventListener("resize", updateButtonWidth);
+    return () => window.removeEventListener("resize", updateButtonWidth);
+  }, []);
 
   const scrollToId = (id: string) => {
     const el = document.querySelector(id) as HTMLElement | null;
@@ -38,19 +57,31 @@ const Hero = () => {
           <p className="text-xl sm:text-lg md:text-xl font-bold text-foreground font-medium px-4 animate-slide-up">
             {t.hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-8 px-4">
-            <button
-              onClick={() => scrollToId("#timings")}
-              className="px-10 py-5 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-lg sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
-            >
-              {t.hero.poojaTimings}
-            </button>
-            <button
-              onClick={() => scrollToId("#vazhipaad")}
-              className="px-10 py-5 sm:px-8 sm:py-4 bg-card text-foreground text-lg sm:text-base border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
-            >
-              {t.hero.vazhipaadDetails}
-            </button>
+          <div className="flex flex-col gap-3 -mt-4 sm:mt-0 pt-0 sm:pt-1 px-4">
+            <div ref={topButtonsRef} className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
+              <button
+                onClick={() => scrollToId("#timings")}
+                className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-base rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
+              >
+                {t.hero.poojaTimings}
+              </button>
+              <button
+                onClick={() => scrollToId("#vazhipaad")}
+                className="w-full px-6 py-3 sm:px-8 sm:py-4 bg-card text-foreground text-sm sm:text-base border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
+              >
+                {t.hero.vazhipaadDetails}
+              </button>
+            </div>
+            <div className="w-full">
+              <button
+                ref={bottomButtonRef}
+                onClick={() => scrollToId("#donation")}
+                className="px-4 py-2.5 sm:px-8 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white text-sm sm:text-lg rounded-lg font-semibold hover:shadow-divine transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-slide-up"
+                style={{ width: buttonWidth }}
+              >
+                {t.hero.donationButton}
+              </button>
+            </div>
           </div>
         </div>
       </div>

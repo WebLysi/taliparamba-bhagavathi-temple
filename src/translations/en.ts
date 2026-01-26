@@ -19,6 +19,7 @@ export default {
         subtitle: "Pookoth Street, Taliparamba",
         poojaTimings: "Temple Timing",
         vazhipaadDetails: "Offerings Details",
+        donationButton: "Click here to make a donation to the divine presence",
     },
 
     history: {
@@ -304,6 +305,44 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
             {title: "Expedited Completion and Re-Consecration Ceremony", text: "Fast-tracked temple construction to ensure timely completion, followed by the re-consecration (Punah Prathishta) and Brahma Kalasham rituals."},
         ],
        
+    },
+
+    donation: {
+        title: "Donation",
+        subtitle: "",
+        openUPIButton: "Open UPI App",
+        accountDetailsTitle: "Account Details",
+        accountName: "Account Name",
+        accountNumber: "Account Number",
+        bankName: "Bank Name",
+        ifscCode: "IFSC Code",
+        upiId: "UPI ID",
+        types: [
+            {
+                title: "Temple Committee",
+                qrCode: "upi-qr/temple-qr.webp",
+                upiId: "202601prt73wrbxrronpstqrsbrp@cbin",
+                accountDetails: {
+                    accountName: "TALIPARANBA SREE BHAGAVATHI TEMPLE",
+                    accountNumber: "3588847183",
+                    bankName: "Central Bank of India",
+                    ifscCode: "CBIN0284514",
+                },
+                upiUrl: "upi://pay?pa=202601prt73wrbxrronpstqrsbrp@cbin&cu=INR",
+            },
+            {
+                title: "Development Committee",
+                qrCode: "upi-qr/trust-qr.webp",
+                upiId: "202510prteim7nzfpwnpstqrsbrp@cbin",
+                accountDetails: {
+                    accountName: "TALIPARANBA SREE BHAGAVATHI TRUST",
+                    accountNumber: "5929465900",
+                    bankName: "Central Bank of India",
+                    ifscCode: "CBIN0284514",
+                },
+                upiUrl: "upi://pay?pa=202510prteim7nzfpwnpstqrsbrp@cbin&cu=INR",
+            },
+        ],
     },
 
     specialNote: {

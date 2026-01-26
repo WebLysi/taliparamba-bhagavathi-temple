@@ -7,6 +7,7 @@ import PoojaTimings from "@/components/PoojaTimings";
 import Vazhipaad from "@/components/Vazhipaad";
 import Calendar from "@/components/Calendar";
 import Architecture from "@/components/Architecture";
+import Donation from "@/components/Donation";
 import Gallery from "@/components/Gallery";
 import Committee from "@/components/Committee";
 import Footer from "@/components/Footer";
@@ -27,6 +28,7 @@ const Index = () => {
       <Calendar />
       <Vazhipaad />
       <Architecture />
+      <Donation />
       <Gallery />
       <Committee />
       <Footer />

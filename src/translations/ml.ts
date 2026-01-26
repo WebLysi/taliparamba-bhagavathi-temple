@@ -16,6 +16,7 @@ export default {
         subtitle: "പൂക്കോത്ത് തെരു, തളിപ്പറമ്പ",
         poojaTimings: "സമയം & ഉത്സവങ്ങൾ",
         vazhipaadDetails: "വഴിപാട് വിവരങ്ങൾ",
+        donationButton: "ഭഗവൽ സന്നിധിയിലേക്ക് സംഭാവന ചെയ്യാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യൂ",
     },
 
     history: {
@@ -308,6 +309,44 @@ export default {
             {title: "പുതിയ ഭദ്രകാളി ക്ഷേത്ര നിർമ്മാണം", text: "ആഗമ ശാസ്ത്ര വിധിപ്രകാരവും ആത്മീയ വാസ്തുവിദ്യാ തത്വങ്ങൾ പാലിച്ചുകൊണ്ടുമുള്ള പരമ്പരാഗത ശൈലിയിൽ പുതിയ ഭദ്രകാളി ക്ഷേത്രത്തിന്റെ നിർമ്മാണം."},
             {title: "വായുകോണിൽ പരാശക്തി പ്രതിഷ്ഠ", text: "ക്ഷേത്ര സമുച്ചയത്തിന്റെ വായുകോണിൽ (വടക്ക്-പടിഞ്ഞാറ് മൂലയിൽ) പരാശക്തി ദേവിയുടെ പുതിയ പ്രതിഷ്ഠ. ഇതിൽ പീഠവും ശിലാവിഗ്രഹവും സ്ഥാപിക്കുന്നത് ഉൾപ്പെടുന്നു"},
             {title: "നിർമ്മാണം വേഗത്തിലാക്കി പുനഃപ്രതിഷ്ഠാ ചടങ്ങ്", text: "ക്ഷേത്രത്തിന്റെ നിർമ്മാണം സമയബന്ധിതമായി പൂർത്തിയാക്കുന്നതിനായി വേഗത്തിലാക്കുകയും, തുടർന്ന് പുനഃപ്രതിഷ്ഠ കൂടാതെ ബ്രഹ്മകലശം എന്നീ ചടങ്ങുകൾ നടത്തുകയും ചെയ്യും"},
+        ],
+    },
+
+    donation: {
+        title: "സംഭാവന",
+        subtitle: "",
+        openUPIButton: "UPI ആപ്പ് തുറക്കുക",
+        accountDetailsTitle: "അക്കൗണ്ട് വിവരങ്ങൾ",
+        accountName: "അക്കൗണ്ട് പേര്",
+        accountNumber: "അക്കൗണ്ട് നമ്പർ",
+        bankName: "ബാങ്ക് പേര്",
+        ifscCode: "IFSC കോഡ്",
+        upiId: "UPI ID",
+        types: [
+            {
+                title: "ക്ഷേത്രം",
+                qrCode: "upi-qr/temple-qr.webp",
+                upiId: "202601prt73wrbxrronpstqrsbrp@cbin",
+                accountDetails: {
+                    accountName: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം",
+                    accountNumber: "3588847183",
+                    bankName: "Central Bank of India",
+                    ifscCode: "CBIN0284514",
+                },
+                upiUrl: "upi://pay?pa=202601prt73wrbxrronpstqrsbrp@cbin&cu=INR",
+            },
+            {
+                title: "വികസന കമ്മിറ്റി",
+                qrCode: "upi-qr/trust-qr.webp",
+                upiId: "202510prteim7nzfpwnpstqrsbrp@cbin",
+                accountDetails: {
+                    accountName: "തളിപ്പറമ്പ ശ്രീ ഭഗവതി ക്ഷേത്രം വികസനം",
+                    accountNumber: "5929465900",
+                    bankName: "Central Bank of India",
+                    ifscCode: "CBIN0284514",
+                },
+                upiUrl: "upi://pay?pa=202510prteim7nzfpwnpstqrsbrp@cbin&cu=INR",
+            },
         ],
     },
 

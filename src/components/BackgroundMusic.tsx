@@ -139,14 +139,14 @@ const BackgroundMusic = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <div className="group flex items-center p-2 bg-black/40 backdrop-blur-md rounded-full border border-white/10 shadow-lg hover:border-gold/50 transition-all duration-300">
+    <div className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 z-50">
+      <div className="group flex items-center p-0.5 sm:p-1 bg-black/40 backdrop-blur-md rounded-full border border-white/10 shadow-lg hover:border-gold/50 transition-all duration-300">
         <audio ref={audioRef} src={audioSrc} loop autoPlay />
 
         <Button
           variant="ghost"
           size="icon"
-          className="rounded-full w-11 h-11 sm:w-10 sm:h-10 hover:bg-white/20 active:bg-white/30 text-white touch-manipulation"
+          className="rounded-full w-8 h-8 sm:w-10 sm:h-10 hover:bg-white/20 active:bg-white/30 text-white touch-manipulation"
           onClick={toggleMute}
           onTouchEnd={(e) => {
             e.preventDefault();
@@ -154,9 +154,9 @@ const BackgroundMusic = () => {
           }}
         >
           {isMuted ? (
-            <VolumeX className="h-5 w-5" />
+            <VolumeX className="h-4 w-4 sm:h-5 sm:w-5" />
           ) : (
-            <Volume2 className="h-5 w-5" />
+            <Volume2 className="h-4 w-4 sm:h-5 sm:w-5" />
           )}
         </Button>
       </div>
