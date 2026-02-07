@@ -286,14 +286,40 @@ export default {
     gallery: {
         title: "ചിത്രശാല",
         subtitle: "വിശുദ്ധ ആഘോഷങ്ങളുടെ ഓർമ്മകൾ",
-        poojaCeremony: "പൂജ ചടങ്ങ്",
-        poojaCeremonyDesc: "എണ്ണ വിളക്കുകളുമായി വൈകുന്നേരം പൂജ നടത്തുന്ന ഭക്തർ",
-        festivalProcession: "ഉത്സവ ഘോഷയാത്ര",
-        festivalProcessionDesc: "അലങ്കരിച്ച ആനയുമായുള്ള മഹത്തായ ഉത്സവ ഘോഷയാത്ര",
-        eveningAarti: "സായാഹ്ന ആരതി",
-        eveningAartiDesc: "താമ്രയളങ്കുകളുമായുള്ള വിശുദ്ധ സായാഹ്ന ആരതി ചടങ്ങ്",
-        morePhotos: "ഞങ്ങളുടെ ആഘോഷങ്ങളിൽ നിന്നും ദൈനംദിന ആചാരങ്ങളിൽ നിന്നുമുള്ള കൂടുതൽ ഫോട്ടോകൾ",
-        viewAll: "എല്ലാ ഫോട്ടോകളും കാണുക",
+        clickToView: "ഒരു ക്യാറ്ററി ഓപ്പൺ ചെയ്യുക. ദിവസം തരം സ്ലൈഡ് ചെയ്യുക കൂടുതൽ ഫോട്ടോകൾ കാണുക.",
+        categories: [
+            {
+                id: "g1",
+                name: "മകരപ്പൊങ്കാല 2026",
+                thumbnail: "Makarappongala-2026/img1.png",
+                images: [
+                    { src: "Makarappongala-2026/img1.png", name: "image 1", date: "2024-03-20" },
+                    { src: "Makarappongala-2026/img2.png", name: "image 2", date: "2024-02-14" },
+                    { src: "Makarappongala-2026/img3.png", name: "image 3", date: "2024-01-10" },
+                    { src: "Makarappongala-2026/img4.png", name: "image 4", date: "2024-01-10" },
+                    { src: "Makarappongala-2026/img5.png", name: "image 5", date: "2024-01-10" },
+                    { src: "Makarappongala-2026/img6.png", name: "image 6", date: "2024-01-10" },
+                ],
+            },
+            {
+                id: "daily",
+                name: "ദൈനംദിന ആചാരങ്ങൾ",
+                thumbnail: "02.jpg",
+                images: [
+                    { src: "02.jpg", name: "പ്രഭാത ആരതി", date: "2024-04-01" },
+                    { src: "01.jpg", name: "സായാഹ്ന പൂജ", date: "2024-03-15" },
+                ],
+            },
+            {
+                id: "management",
+                name: "നിർവ്വഹണം",
+                thumbnail: "09.jpg",
+                images: [
+                    { src: "09.jpg", name: "കമ്മിറ്റി", date: "2024-05-05" },
+                    { src: "image.png", name: "യോഗം", date: "2024-04-20" },
+                ],
+            },
+        ],
     },
 
     specialNote: {

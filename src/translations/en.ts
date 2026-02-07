@@ -290,10 +290,40 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
     gallery: {
         title: "Photo Gallery",
         subtitle: "Memories of Sacred Celebrations",
-        morePhotos: "More photos from our celebrations and daily rituals",
-        viewAll: "View All Photos",
-
-
+        clickToView: "Click a category to open its gallery. Sort by date and scroll to load more.",
+        categories: [
+            {
+                id: "g1",
+                name: "Makarappongala 2026",
+                thumbnail: "Makarappongala-2026/img1.png",
+                images: [
+                    { src: "Makarappongala-2026/img1.png", name: "image 1", date: "2024-03-20" },
+                    { src: "Makarappongala-2026/img2.png", name: "image 2", date: "2024-02-14" },
+                    { src: "Makarappongala-2026/img3.png", name: "image 3", date: "2024-01-10" },
+                    { src: "Makarappongala-2026/img4.png", name: "image 4", date: "2024-01-10" },
+                    { src: "Makarappongala-2026/img5.png", name: "image 5", date: "2024-01-10" },
+                    { src: "Makarappongala-2026/img6.png", name: "image 6", date: "2024-01-10" },
+                ],
+            },
+            {
+                id: "daily",
+                name: "Daily Rituals",
+                thumbnail: "02.jpg",
+                images: [
+                    { src: "02.jpg", name: "Morning Aarti", date: "2024-04-01" },
+                    { src: "01.jpg", name: "Evening Pooja", date: "2024-03-15" },
+                ],
+            },
+            {
+                id: "management",
+                name: "Management",
+                thumbnail: "09.jpg",
+                images: [
+                    { src: "09.jpg", name: "Committee", date: "2024-05-05" },
+                    { src: "image.png", name: "Meeting", date: "2024-04-20" },
+                ],
+            },
+        ],
     },
 
     architecture: {
