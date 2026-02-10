@@ -1,6 +1,7 @@
-import { Image as ImageIcon, X, ArrowDownAZ, ArrowUpAZ } from "lucide-react";
+import { Image as ImageIcon, X, ArrowDownAZ, ArrowUpAZ, Loader2, ImageOff } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useEffect, useRef, useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 // Resolve image path to asset URL (like Committee). Paths from t.gallery.categories.
 const galleryAssets = import.meta.glob<{ default: string }>(
@@ -15,11 +16,64 @@ function getGalleryImageSrc(path: string): string | null {
   return key ? galleryAssets[key].default : null;
 }
 
+// Image loader component with skeleton loading state
+interface ImageLoaderProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const ImageLoader = ({ src, alt, className }: ImageLoaderProps) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
+
+  const handleError = () => {
+    setIsLoading(false);
+    setError(true);
+  };
+
+  return (
+    <>
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-muted rounded-lg">
+          <Skeleton className="absolute inset-0" />
+          <div className="relative flex flex-col items-center justify-center gap-2 z-10">
+            <Loader2 className="w-6 h-6 animate-spin text-foreground text-black" />
+            <span className="text-xs font-medium text-foreground/70 text-black">Loading...</span>
+          </div>
+        </div>
+      )}
+      {!error && (
+        <img
+          src={src}
+          alt={alt}
+          className={className}
+          onLoad={handleLoad}
+          onError={handleError}
+        />
+      )}
+      {error && (
+        <div className="absolute inset-0 flex items-center justify-center bg-muted rounded-lg">
+          <Skeleton className="absolute inset-0" />
+          <div className="relative flex flex-col items-center justify-center gap-2 z-10">
+            <ImageOff className="w-6 h-6 text-muted-foreground text-black" />
+            <span className="text-xs font-medium text-muted-foreground text-black">Image Error</span>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
 const PAGE_SIZE = 12;
 type DateOrder = "new" | "old";
 
-type GalleryImage = { src: string; name: string; date: string };
-type GalleryCategory = { id: string; name: string; thumbnail: string; images: GalleryImage[] };
+type GalleryImage = { src: string; date: string };
+type GalleryCategory = { id: string; name: string; date: string; thumbnail: string; images: GalleryImage[] };
 
 const Gallery = () => {
   const { t, language } = useLanguage();
@@ -134,21 +188,24 @@ const Gallery = () => {
               data-cat={cat.id}
             >
               <div className="aspect-[4/3] relative">
-                <img
+                <ImageLoader
                   src={getGalleryImageSrc(cat.thumbnail) ?? ""}
                   alt={cat.name}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Bottom dark gradient so text is readable */}
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent pointer-events-none"
                   aria-hidden
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <div className="font-semibold text-lg drop-shadow-sm">
+                  <div className="text-lg text-white/90">
                     {cat.name}
                   </div>
-                  <div className="text-sm text-white/90 mt-0.5">
+                  <div className="text-base text-white/80">
+                    {cat.date}  
+                  </div>
+                  <div className="text-xs text-white/70">
                     {cat.images.length} {cat.images.length === 1 ? "image" : "images"}
                   </div>
                 </div>
@@ -157,9 +214,9 @@ const Gallery = () => {
           ))}
         </div>
 
-        <p className="text-sm text-muted-foreground text-center mt-6 px-2">
+        {/* <p className="text-sm text-muted-foreground text-center mt-6 px-2">
           {t.gallery.clickToView}
-        </p>
+        </p> */}
 
         {/* Full gallery modal – modern UI */}
         {openCategory && currentCategory && (
@@ -229,27 +286,27 @@ const Gallery = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                   {displayImages.map((img, i) => (
                     <article
-                      key={`${img.date}-${img.name}-${i}`}
+                      key={`${img.src}-${i}`}
                       className="group rounded-xl overflow-hidden border border-border/50 bg-card shadow-sm hover:shadow-lg hover:border-primary/20 transition-all duration-300"
                     >
                       <div className="aspect-[4/3] relative overflow-hidden">
-                        <img
+                        <ImageLoader
                           src={getGalleryImageSrc(img.src) ?? ""}
-                          alt={img.name}
+                          alt={img.src}
                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div
                           className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none"
                           aria-hidden
                         />
-                        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white">
+                        {/* <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white">
                           <p className="font-semibold text-sm sm:text-base line-clamp-2 drop-shadow-md" title={img.name}>
                             {img.name}
                           </p>
                           <p className="text-xs text-white/90 mt-0.5 font-medium">
                             {img.date}
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     </article>
                   ))}
