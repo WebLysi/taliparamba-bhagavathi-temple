@@ -351,10 +351,10 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         ifscCode: "IFSC Code",
         upiId: "UPI ID",
         alert: {
-            title: "Donation Instructions",
-            toaster: "An estimated outlay of approximately ₹1 Crore is projected for the first phase of construction, which includes the Sreekovil (Sanctum Sanctorum) for Goddess Bhadrakali, Naalambalam, Chuttambalam, Balikkallu (Sacrificial Stones), Paattupura, and the Perimeter Wall. The generous participation and wholehearted cooperation of every devotee are paramount to the success of this noble mission.\n\n We most respectfully and joyfully seek your complete support in this sacred endeavor.",
-            message1: "",
-            message2: "",
+            title: "Temple Renovation Notice",
+            toaster: "",
+            message1: "An estimated outlay of approximately ₹1 Crore is projected for the first phase of construction, which includes the Sreekovil (Sanctum Sanctorum) for Goddess Bhadrakali, Naalambalam, Chuttambalam, Balikkallu (Sacrificial Stones), Paattupura, and the Perimeter Wall.",
+            message2: "The generous participation and wholehearted cooperation of every devotee are paramount to the success of this noble mission. We most respectfully and joyfully seek your complete support in this sacred endeavor.",
         },
         types: [
             {

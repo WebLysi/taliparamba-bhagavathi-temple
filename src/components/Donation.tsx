@@ -60,7 +60,7 @@ const Donation = () => {
           <p className="text-xl sm:text-xl text-muted-foreground">{t.donation?.subtitle}</p>
         </div>
 
-        {/* <div className="max-w-6xl mx-auto mb-12 sm:mb-16">    
+        <div className="max-w-6xl mx-auto mb-12 sm:mb-16">    
           <Card  className="p-6 sm:p-8 shadow-soft hover:shadow-divine transition-all duration-300 border-primary border-2 hover:border-primary/60 bg-gradient-to-br from-primary/20 to-secondary/20 shadow-soft">         
             <CardHeader className="pb-4">
               <CardTitle className="text-lg sm:text-xl font-semibold text-center text-primary">
@@ -74,7 +74,7 @@ const Donation = () => {
               </p>
             </CardContent>
           </Card>
-        </div> */}
+        </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
