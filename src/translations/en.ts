@@ -333,7 +333,7 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         title: "Infrastructural Developments",
         subtitle: "Architecture & Expansion Plans",
         points: [
-            {title: "New Bhadrakali Temple Construction", text: "Construction of a new Bhadrakali Temple with traditional temple architecture, adhering to Agama Shastra and spiritual design principles."},
+            {title: "New Bhadrakali Temple Construction", text: "The construction follows a traditional style, strictly adhering to the rituals of Agama Shastra and the spiritual principles of Vastu Vidya. In the first phase, the project aims to construct the Sreekovil (Sanctum Sanctorum), Naalambalam, Chuttambalam, Balikkallu (Sacrificial Stones), Paattupura, and the Perimeter Wall."},
             {title: "Parashakti Consecration in Vayu Kona", text: "New consecration (Prathishta) of the deity Parashakti in the North-West corner (Vayu Kona) of the temple complex, including the installation of a Peetha (pedestal) and stone idol (Shila Vigraham)."},
             {title: "Expedited Completion and Re-Consecration Ceremony", text: "Fast-tracked temple construction to ensure timely completion, followed by the re-consecration (Punah Prathishta) and Brahma Kalasham rituals."},
         ],
@@ -350,6 +350,12 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         bankName: "Bank Name",
         ifscCode: "IFSC Code",
         upiId: "UPI ID",
+        alert: {
+            title: "Donation Instructions",
+            toaster: "An estimated outlay of approximately ₹1 Crore is projected for the first phase of construction, which includes the Sreekovil (Sanctum Sanctorum) for Goddess Bhadrakali, Naalambalam, Chuttambalam, Balikkallu (Sacrificial Stones), Paattupura, and the Perimeter Wall. The generous participation and wholehearted cooperation of every devotee are paramount to the success of this noble mission.\n\n We most respectfully and joyfully seek your complete support in this sacred endeavor.",
+            message1: "",
+            message2: "",
+        },
         types: [
             {
                 title: "Temple Donation",
