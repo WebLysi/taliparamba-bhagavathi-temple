@@ -62,6 +62,19 @@ export default {
         ]
     },
 
+    lovingMemory: {
+        title: "ഓർമപ്പൂക്കൾ",
+        subtitle: "",
+        members: [
+            {
+                position: "മുൻ കാല ക്ഷേത്ര സെക്രട്ടറി",
+                name: "പട്ടാണി വിജയൻ",
+                image: "PattaniVijayan.webp",
+                mentioned: ""
+            },
+        ]
+    },
+
     timings: {
         title: "പൂജ സമയം",
         subtitle: "ദിവസേന ആരാധന ഷെഡ്യൂൾ",

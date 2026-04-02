@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import History from "@/components/History";
 import Management from "@/components/Management";
+import LovingMemory from "@/components/LovingMemory";
 import SpecialNote from "@/components/SpecialNote";
 import PoojaTimings from "@/components/PoojaTimings";
 import Vazhipaad from "@/components/Vazhipaad";
@@ -23,6 +24,7 @@ const Index = () => {
       <Hero />
       <History />
       <Management />
+      <LovingMemory />
       <SpecialNote />
       <PoojaTimings />
       <Calendar />

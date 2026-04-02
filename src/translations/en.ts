@@ -65,6 +65,19 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
         ]
     },
 
+    lovingMemory: {
+        title: "Loving Memory",
+        subtitle: "",
+        members: [
+            {
+                position: "Former Secretary",
+                name: "Pattani Vijayan",
+                image: "PattaniVijayan.webp",
+                mentioned: ""
+            },
+        ]
+    },
+
     timings: {
         title: "Temple Timings",
         subtitle: "Daily Worship Schedule",
