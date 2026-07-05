@@ -48,7 +48,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 sm:px-8 text-center pt-16 sm:pt-16 md:pt-20">
         <div className="max-w-4xl mx-auto space-y-4">
           <img 
-            src="/logo.png" 
+            src="/logo.webp" 
             alt="Temple Logo" 
             className="hidden lg:inline w-16 h-16 opacity-80 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-5xl sm:text-4xl font-bold mb-1 shadow-divine animate-float"
           />

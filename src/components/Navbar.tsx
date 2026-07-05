@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 sm:h-16 md:h-20">
           <div className="flex items-center space-x-2 sm:space-x-3 min-w-0 flex-shrink">
             <img 
-              src="/logo.png" 
+              src="/logo.webp" 
               alt="Temple Logo" 
               className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
             />

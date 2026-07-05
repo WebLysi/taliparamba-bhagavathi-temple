@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3">
               <img 
-                src="/logo.png" 
+                src="/logo.webp" 
                 alt="Temple Logo" 
                 className="w-10 h-10 sm:w-10 sm:h-10 object-contain"
               />
