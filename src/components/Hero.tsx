@@ -39,6 +39,7 @@ const Hero = () => {
           src={heroImage}
           alt="Temple Main View"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
       </div>
