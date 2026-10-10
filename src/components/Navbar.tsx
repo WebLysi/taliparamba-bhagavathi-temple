@@ -11,7 +11,7 @@ const Navbar = () => {
   const navItems = [
     { label: t.nav.history, href: "#history" },
     { label: t.nav.management, href: "#management" },
-    { label: t.nav.poojaTimings, href: "#timings" },
+    { label: t.nav.poojaTimings, href: "#upcoming-festival", badge: t.nav.newLabel },
     { label: t.nav.vazhipaad, href: "#vazhipaad" },
     { label: t.nav.gallery, href: "#gallery" },
     { label: t.nav.committee, href: "#committee" },
@@ -69,13 +69,20 @@ const Navbar = () => {
                 key={item.href}
                 variant="ghost"
                 onClick={() => scrollToSection(item.href)}
-                className={`hover:bg-transparent transition-all text-sm xl:text-base px-2 xl:px-3 py-2 ${
+                className={`hover:bg-transparent transition-all text-sm xl:text-base px-2 xl:px-3 py-1.5 h-auto ${
                   activeSection === item.href 
                     ? 'text-primary font-semibold' 
                     : 'hover:text-primary text-foreground'
                 }`}
               >
-                {item.label}
+                <span className="flex flex-col items-center leading-tight">
+                  <span>{item.label}</span>
+                  {item.badge && (
+                    <span className="mt-0.5 text-[10px] font-semibold tracking-[0.14em] text-[#b45309]">
+                      {item.badge}
+                    </span>
+                  )}
+                </span>
               </Button>
             ))}
             <Button
@@ -121,13 +128,20 @@ const Navbar = () => {
                 key={item.href}
                 variant="ghost"
                 onClick={() => scrollToSection(item.href)}
-                className={`w-full justify-start hover:bg-transparent transition-all text-base sm:text-lg py-3 sm:py-5 ${
+                className={`w-full justify-start hover:bg-transparent transition-all text-base sm:text-lg py-3 sm:py-5 h-auto ${
                   activeSection === item.href 
                     ? 'text-primary font-semibold' 
                     : 'hover:text-primary text-foreground pl-4 sm:pl-5'
                 }`}
               >
-                {item.label}
+                <span className="flex flex-col items-start leading-tight">
+                  <span>{item.label}</span>
+                  {item.badge && (
+                    <span className="mt-0.5 text-[11px] font-semibold tracking-[0.14em] text-[#b45309]">
+                      {item.badge}
+                    </span>
+                  )}
+                </span>
               </Button>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import Management from "@/components/Management";
-import { title } from "process";
+// import { title } from "process";
 
 export default {
     lang: "en",
@@ -9,6 +9,7 @@ export default {
         history: "History",
         management: "Management",
         poojaTimings: "Timings & Festivals",
+        newLabel: "New",
         vazhipaad: "Offerings",
         gallery: "Gallery",
         committee: "Committee",
@@ -85,6 +86,42 @@ Until the dilapidated Bhadrakali temple can be renovated, the current practice h
             {day: "All Friday Evening", time: ["Evening 5:00 PM - 7:30 PM"]},
             {day: "All Hindu Festival Days", time: ["Morning 5:30 AM - 9:00 AM", "Evening 5:00 PM - 7:30 PM"]}
         ]
+    },
+
+    festival: {
+        title: "Upcoming Festival",
+        eventName: "Sahasra Chandi Parayanam",
+        organisedByLabel: "Organised by",
+        organisedBy: "Vaishnavam Satsanga Vedi, Karivellur",
+        intro: "A sacred Sahasra Chandi Parayanam (Recitation of Sri Devi Mahatmya) will be held at Taliparamba Sree Bhagavathi Temple on Sunday, 18 October 2026. All devotees are cordially invited to take part in this divine occasion.",
+        dateLabel: "Date",
+        date: "Sunday, 18 October 2026",
+        timeLabel: "Time",
+        time: "From 7:00 AM onwards",
+        venueLabel: "Venue",
+        venue: "Taliparamba Sree Bhagavathi Temple",
+        scheduleTitle: "Programme Schedule",
+        schedule: [
+            { time: "7:15 AM", programme: "Ceremonial Lighting of the Sacred Lamp" },
+            { time: "7:30 AM", programme: "Dasalaksha Sahasranama Kumkumarchana (1,000 participants)" },
+            { time: "8:30 AM", programme: "Morning Prasadam" },
+            { time: "9:00 AM", programme: "Devi Mahatmya Parayanam (1,000 participants)" },
+            { time: "11:30 AM", programme: "Discourse on Devi Mahatmya" },
+            { time: "Thereafter", programme: "Yajna Prasadam Distribution and Annadanam (Community Meal)" },
+        ],
+        discourseTitle: "Spiritual Discourse",
+        acharyaLabel: "Acharya",
+        acharya: "Vachavadhyan Subramanian Namboothiri",
+        participationTitle: "Participation & Registration",
+        participation: [
+            "The first 125 people to register will have the opportunity to participate in person.",
+            "For the Devi Mahatmya Parayanam at 9:00 AM, a total of 1,000 devotees will participate, with 150 attending in person and the remaining participants joining online.",
+            "Those interested in participating are requested to register by providing their name and phone number in the designated group.",
+            "All devotees are cordially invited to take part in this sacred occasion.",
+        ],
+        footerLabel: "Secretary / President",
+        footer: "Taliparamba Sree Bhagavathi Temple",
+        posterAlt: "Sahasra Chandi Parayanam poster — Sunday, 18 October 2026 at Taliparamba Sree Bhagavathi Temple",
     },
     
 
