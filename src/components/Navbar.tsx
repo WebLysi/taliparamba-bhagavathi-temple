@@ -118,21 +118,27 @@ const Navbar = () => {
                 {language === 'en' ? 'ML' : 'EN'}
               </span>
             </Button>
+
             <div className="relative flex items-center justify-center">
-              <span className="absolute bottom-full mb-0.5 text-[10px] font-bold text-red-600 whitespace-nowrap">
-                {language === 'en' ? 'New' : 'വിശേഷം'}
-              </span>
               <Button
                 variant="ghost"
                 size="icon"
-                className="w-10 h-10 sm:w-12 sm:h-12 border flex-shrink-0"
+                className="relative w-10 h-10 sm:w-12 sm:h-12 border flex-shrink-0"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
               >
+                <span
+                  className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap font-bold text-red-600 pointer-events-none leading-none ${
+                    language === 'ml' ? 'top-1 text-[9px]' : 'top-1 text-[10px]'
+                  }`}
+                >
+                  {language === 'en' ? 'New' : 'വിശേഷം'}
+                </span>
+
                 {isOpen ? (
-                  <X className="h-5 w-5 sm:h-7 sm:w-7" />
+                  <X className="h-5 w-5 sm:h-7 sm:w-7 mt-2" />
                 ) : (
-                  <Menu className="h-5 w-5 sm:h-7 sm:w-7" />
+                  <Menu className="h-5 w-5 sm:h-7 sm:w-7 mt-2" />
                 )}
               </Button>
             </div>
