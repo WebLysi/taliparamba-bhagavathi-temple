@@ -159,8 +159,13 @@ const Navbar = () => {
                     : 'hover:text-primary text-foreground pl-4 sm:pl-5'
                 }`}
               >
-                <span className="flex flex-col items-start leading-tight">
+                <span className="inline-flex flex-wrap items-center gap-2 leading-tight">
                   <span>{item.label}</span>
+                  {item.badge && (
+                    <span className="text-[11px] font-bold text-red-600 whitespace-nowrap">
+                      {language === 'en' ? 'New' : 'വിശേഷം'}
+                    </span>
+                  )}
                 </span>
               </Button>
             ))}
