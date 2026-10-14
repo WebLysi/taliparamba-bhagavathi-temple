@@ -39,7 +39,7 @@ const UpcomingFestival = () => {
     >
       <div className="container mx-auto px-6 sm:px-8">
         <div className="text-center mb-8 sm:mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary to-secondary mb-4 shadow-soft">
+          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary to-secondary mb-4 shadow-soft animate-float">
             <LotusMark className="w-8 h-8 text-white" />
           </div>
           <h2
@@ -48,7 +48,6 @@ const UpcomingFestival = () => {
           >
             {festival.title}
           </h2>
-          <LotusMark className="w-5 h-5 text-primary/80 mx-auto mt-3" />
         </div>
 
         <Card className="overflow-hidden border-primary/20 shadow-soft bg-card">

@@ -78,14 +78,15 @@ const Navbar = () => {
                     ? 'text-primary font-semibold'
                     : 'hover:text-primary text-foreground'
                 }`}
-              >
-                <span className="relative flex flex-col items-center justify-center leading-tight">
+              >              
+                <span className="relative inline-flex items-center justify-center leading-tight">
+                  <span>{item.label}</span>
+
                   {item.badge && (
-                    <span className="absolute bottom-full mb-0.5 text-[11px] font-bold text-red-600 whitespace-nowrap">
+                    <span className="absolute -top-3 -right-5 z-10 rounded-full bg-red-600 px-1.5 py-0.5 text-[9px] font-bold leading-none text-white whitespace-nowrap">
                       {language === 'en' ? 'New' : 'വിശേഷം'}
                     </span>
                   )}
-                  <span>{item.label}</span>
                 </span>
               </Button>
             ))}
@@ -106,43 +107,27 @@ const Navbar = () => {
           </div>
 
           {/* Tablet/Mobile Menu Button and Language Toggle */}
+          
           <div className="lg:hidden flex items-center gap-1 sm:gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="px-2 sm:px-3 py-2 text-foreground hover:text-primary hover:bg-transparent border text-xs sm:text-sm"
-            >
-              <Globe className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
-              <span className="text-xs sm:text-sm font-medium">
-                {language === 'en' ? 'ML' : 'EN'}
-              </span>
-            </Button>
-
-            <div className="relative flex items-center justify-center">
+            <div className="relative">
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative w-10 h-10 sm:w-12 sm:h-12 border flex-shrink-0"
+                className="w-10 h-10 sm:w-12 sm:h-12 border flex-shrink-0"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
               >
-                <span
-                  className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap font-bold text-red-600 pointer-events-none leading-none ${
-                    language === 'ml' ? 'top-1 text-[9px]' : 'top-1 text-[10px]'
-                  }`}
-                >
-                  {language === 'en' ? 'New' : 'വിശേഷം'}
-                </span>
-
                 {isOpen ? (
-                  <X className="h-5 w-5 sm:h-7 sm:w-7 mt-2" />
+                  <X className="h-5 w-5 sm:h-7 sm:w-7" />
                 ) : (
-                  <Menu className="h-5 w-5 sm:h-7 sm:w-7 mt-2" />
+                  <Menu className="h-5 w-5 sm:h-7 sm:w-7" />
                 )}
               </Button>
+
+              <span className="absolute -top-1 -right-1 z-10 h-2 w-2 rounded-full pointer-events-none bg-red-600" />
             </div>
           </div>
+
         </div>
 
         {/* Mobile/Tablet Navigation Menu */}
@@ -162,7 +147,7 @@ const Navbar = () => {
                 <span className="inline-flex flex-wrap items-center gap-2 leading-tight">
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="text-[11px] font-bold text-red-600 whitespace-nowrap">
+                    <span className="inline-flex items-center justify-center rounded-full  px-2 py-0.5 text-[10px] font-bold leading-none text-white whitespace-nowrap bg-red-600">
                       {language === 'en' ? 'New' : 'വിശേഷം'}
                     </span>
                   )}
