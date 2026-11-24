@@ -11,11 +11,7 @@ const Navbar = () => {
   const navItems = [
     { label: t.nav.history, href: '#history' },
     { label: t.nav.management, href: '#management' },
-    {
-      label: t.nav.poojaTimings,
-      href: '#upcoming-festival',
-      badge: t.nav.newLabel,
-    },
+    { label: t.nav.poojaTimings, href: '#timings' },
     { label: t.nav.vazhipaad, href: '#vazhipaad' },
     { label: t.nav.gallery, href: '#gallery' },
     { label: t.nav.committee, href: '#committee' },
@@ -40,7 +36,7 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -81,15 +77,10 @@ const Navbar = () => {
               >
                 <span className="relative inline-flex items-center justify-center leading-tight">
                   <span>{item.label}</span>
-
-                  {item.badge && (
-                    <span className="absolute -top-3 -right-5 z-10 rounded-full bg-red-600 px-1.5 py-0.5 text-[9px] font-bold leading-none text-white whitespace-nowrap">
-                      {language === 'en' ? 'New' : 'വിശേഷം'}
-                    </span>
-                  )}
                 </span>
               </Button>
             ))}
+
             <Button
               variant="ghost"
               size="sm"
@@ -128,18 +119,10 @@ const Navbar = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
               >
-                <span
-                  className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap font-bold text-red-600 pointer-events-none leading-none ${
-                    language === 'ml' ? 'top-1 text-[9px]' : 'top-1 text-[10px]'
-                  }`}
-                >
-                  {language === 'en' ? 'New' : 'വിശേഷം'}
-                </span>
-
                 {isOpen ? (
-                  <X className="h-5 w-5 sm:h-7 sm:w-7 mt-2" />
+                  <X className="h-5 w-5 sm:h-7 sm:w-7" />
                 ) : (
-                  <Menu className="h-5 w-5 sm:h-7 sm:w-7 mt-2" />
+                  <Menu className="h-5 w-5 sm:h-7 sm:w-7" />
                 )}
               </Button>
             </div>
@@ -162,11 +145,6 @@ const Navbar = () => {
               >
                 <span className="inline-flex flex-wrap items-center gap-2 leading-tight">
                   <span>{item.label}</span>
-                  {item.badge && (
-                    <span className="inline-flex items-center justify-center rounded-full bg-red-600 px-2 py-0.5 text-[10px] font-bold leading-none text-white whitespace-nowrap">
-                      {language === 'en' ? 'New' : 'വിശേഷം'}
-                    </span>
-                  )}
                 </span>
               </Button>
             ))}

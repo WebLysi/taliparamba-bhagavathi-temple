@@ -1,19 +1,18 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import History from "@/components/History";
-import Management from "@/components/Management";
-import LovingMemory from "@/components/LovingMemory";
-import SpecialNote from "@/components/SpecialNote";
-import UpcomingFestival from "@/components/UpcomingFestival";
-import PoojaTimings from "@/components/PoojaTimings";
-import Vazhipaad from "@/components/Vazhipaad";
-import Calendar from "@/components/Calendar";
-import Architecture from "@/components/Architecture";
-import Donation from "@/components/Donation";
-import Gallery from "@/components/Gallery";
-import Committee from "@/components/Committee";
-import Footer from "@/components/Footer";
-import { usePreloader } from "@/hooks/usePreloader";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import History from '@/components/History';
+import Management from '@/components/Management';
+import LovingMemory from '@/components/LovingMemory';
+import SpecialNote from '@/components/SpecialNote';
+import PoojaTimings from '@/components/PoojaTimings';
+import Vazhipaad from '@/components/Vazhipaad';
+import Calendar from '@/components/Calendar';
+import Architecture from '@/components/Architecture';
+import Donation from '@/components/Donation';
+import Gallery from '@/components/Gallery';
+import Committee from '@/components/Committee';
+import Footer from '@/components/Footer';
+import { usePreloader } from '@/hooks/usePreloader';
 
 const Index = () => {
   // Track all images in the DOM and wait for them to load
@@ -27,7 +26,6 @@ const Index = () => {
       <Management />
       <LovingMemory />
       <SpecialNote />
-      <UpcomingFestival />
       <PoojaTimings />
       <Calendar />
       <Vazhipaad />
